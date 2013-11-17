@@ -4,25 +4,27 @@ public class Game {
 
 	public boolean gameType;
 	public Grid grid;
-	// public Player player1;
-	// public Player player2;
-	// public Player currentPlayer;
+	public Player player1;
+	public Player player2;
+	public Player currentPlayer;
 
 	public Game(boolean typeOfGame)
 	{
 		gameType = typeOfGame;
 		grid = new Grid();
-		// this.player1 = new Human();
-		// if(gameType)
-		// {
-		// 	this.player2 = new Human();
-		// }
-		// else
-		// {
-		// 	this.player2 = new NPC();
-		// }
+		this.player1 = new Player();
+		if(gameType)
+		{
+			this.player2 = new NPC();
 
+		}
+		else
+		{
+			this.player2 = new Player();
+		}
+		currentPlayer = player1;
 	}
+
 	public boolean gotWinner(){
 		
 		if(0 != grid.matrix[0][0] && grid.matrix[0][0] == grid.matrix[0][1] && grid.matrix[0][0] == grid.matrix[0][2])

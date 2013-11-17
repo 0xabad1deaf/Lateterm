@@ -11,15 +11,16 @@ public class GameTest {
 	// }
 
 	@Test
-	public void typeOfGameMethod(){
+	public void GameConstructor(){
 		Game game = new Game(true);
 		assertEquals(game.gameType, true);
+		assertEquals(game.player1.wins, 0);
+		assertEquals(game.player2.wins, 0);
 	}
 
 	@Test
 	public void gotWinnerMethod(){
 		Game game = new Game(true);
-
 
 		//Testing every possible row that resaults in a win
 		game.grid.set_x(0,0);
@@ -78,8 +79,5 @@ public class GameTest {
 		game.grid.set_y(2,2);
 		assertEquals(game.gotWinner(), false);
 		game.grid.clearGrid();
-
-
-
 	}
 }
