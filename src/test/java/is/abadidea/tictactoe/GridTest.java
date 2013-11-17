@@ -14,5 +14,26 @@ public class GridTest {
         assertEquals(grid.matrix[2].length, 3);
     }
 
+    @Test
+    public void set_xMethodSetsX(){
+        Grid grid = new Grid();
+        grid.set_x(1,1);
+        assertEquals(grid.matrix[1][1], 1);
+        assertEquals(grid.matrix[1][2], 0);
+    }
+    @Test
+    public void set_yMethodSetsY(){
+        Grid grid = new Grid();
+        grid.set_y(1,1);
+        assertEquals(grid.matrix[1][1], 2);
+        assertEquals(grid.matrix[1][2], 0);
+    }
+
+    @Test
+    public void getAtMethod(){
+        Grid grid = new Grid();
+        grid.set_x(1,1);
+        assertEquals(grid.getAt(1,1), 1);
+    }
 }
 
