@@ -14,4 +14,9 @@ public class NPCTest {
             assertEquals(0 <= y && y <= 2, true);
         }
     }
+    @Test
+    public void winsIsInitiallyZero(){
+        Player human = new Player();
+        assertEquals(human.getWins(), 0);
+    }
 }
