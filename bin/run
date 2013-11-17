@@ -1,5 +1,4 @@
 #! /bin/bash
 
-mvn package
-mvn exec:java -Dexec.mainClass="is.abadidea.tictactoe.App"
-
+port PORT=4567
+java -jar target/helloworld-1.0-SNAPSHOT-jar-with-dependencies.jar
