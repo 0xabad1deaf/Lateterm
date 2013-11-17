@@ -6,33 +6,12 @@ import org.junit.Test;
 public class NPCTest {
 
     @Test
-    public void constructorReturns2Darray(){
-        Grid grid = new Grid();
-        assertEquals(grid.matrix.length, 3);
-        assertEquals(grid.matrix[0].length, 3);
-        assertEquals(grid.matrix[1].length, 3);
-        assertEquals(grid.matrix[2].length, 3);
-    }
-
-    @Test
-    public void set_xMethodSetsX(){
-        Grid grid = new Grid();
-        grid.set_x(1,1);
-        assertEquals(grid.matrix[1][1], 1);
-        assertEquals(grid.matrix[1][2], 0);
-    }
-    @Test
-    public void set_yMethodSetsY(){
-        Grid grid = new Grid();
-        grid.set_y(1,1);
-        assertEquals(grid.matrix[1][1], 2);
-        assertEquals(grid.matrix[1][2], 0);
-    }
-
-    @Test
-    public void getAtMethod(){
-        Grid grid = new Grid();
-        grid.set_x(1,1);
-        assertEquals(grid.getAt(1,1), 1);
+    public void rndReturnsNumberInRange(){
+        NPC computer = new NPC();
+        for(int i = 0; i < 10; ++i){
+            int x = computer.random_coord(), y = computer.random_coord();
+            assertEquals(0 <= x && x <= 2, true);
+            assertEquals(0 <= y && y <= 2, true);
+        }
     }
 }
