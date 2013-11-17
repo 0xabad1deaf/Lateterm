@@ -14,4 +14,3 @@ public class NPC {
         return rng.nextInt(3);
     }
 }
-
