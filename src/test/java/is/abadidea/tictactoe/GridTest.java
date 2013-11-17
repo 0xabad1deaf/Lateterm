@@ -1,0 +1,39 @@
+package is.abadidea.tictactoe;
+
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class GridTest {
+
+    @Test
+    public void constructorReturns2Darray(){
+        Grid grid = new Grid();
+        assertEquals(grid.matrix.length, 3);
+        assertEquals(grid.matrix[0].length, 3);
+        assertEquals(grid.matrix[1].length, 3);
+        assertEquals(grid.matrix[2].length, 3);
+    }
+
+    @Test
+    public void set_xMethodSetsX(){
+        Grid grid = new Grid();
+        grid.set_x(1,1);
+        assertEquals(grid.matrix[1][1], 1);
+        assertEquals(grid.matrix[1][2], 0);
+    }
+    @Test
+    public void set_yMethodSetsY(){
+        Grid grid = new Grid();
+        grid.set_y(1,1);
+        assertEquals(grid.matrix[1][1], 2);
+        assertEquals(grid.matrix[1][2], 0);
+    }
+
+    @Test
+    public void getAtMethod(){
+        Grid grid = new Grid();
+        grid.set_x(1,1);
+        assertEquals(grid.getAt(1,1), 1);
+    }
+}
+
