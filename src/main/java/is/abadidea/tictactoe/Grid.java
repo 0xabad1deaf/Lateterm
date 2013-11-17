@@ -18,4 +18,11 @@ public class Grid {
     public int getAt(int x, int y){
         return matrix[x][y];
     }
+    public void clearGrid(){
+        for (int i = 0; i < 3 ; i++) {
+            for (int j = 0; j < 3; j++) {
+                matrix[i][j] = 0;
+            }
+        }
+    }
 }
