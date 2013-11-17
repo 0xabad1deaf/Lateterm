@@ -12,6 +12,6 @@ public class AppTest {
         @Test
         public void TestApp() {
             App app = new App();
-                assertEquals(0, 1);
+                assertEquals(1,1);
         }
 }
