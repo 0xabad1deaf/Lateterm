@@ -35,5 +35,15 @@ public class GridTest {
         grid.set_x(1,1);
         assertEquals(grid.getAt(1,1), 1);
     }
+
+    @Test
+    public void clearGridMethod(){
+        Grid grid = new Grid();
+        grid.set_x(1,1);
+        grid.set_y(0,0);
+        grid.clearGrid();
+        assertEquals(grid.getAt(1,1), 0);
+        assertEquals(grid.getAt(0,0), 0);
+    }
 }
 
