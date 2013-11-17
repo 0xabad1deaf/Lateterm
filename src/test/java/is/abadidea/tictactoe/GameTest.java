@@ -22,6 +22,10 @@ public class GameTest {
 	public void gotWinnerMethod(){
 		Game game = new Game(true);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c7a3be443932965cb77910920cf0213f8f7a9178
 		//Testing every possible row that resaults in a win
 		game.grid.set_x(0,0);
 		game.grid.set_x(0,1);
@@ -79,5 +83,11 @@ public class GameTest {
 		game.grid.set_y(2,2);
 		assertEquals(game.gotWinner(), false);
 		game.grid.clearGrid();
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> c7a3be443932965cb77910920cf0213f8f7a9178
 	}
 }
