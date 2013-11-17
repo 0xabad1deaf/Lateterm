@@ -1,13 +1,17 @@
 package is.abadidea.tictactoe;
 
-/**
- * Hello world!
- *
- */
+import static spark.Spark.*;
+import spark.*;
+
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        get(new Route("/") {
+            @override
+            public Object handle(Request request, Response response) {
+                return "Hello World!";
+            }
+        });
     }
 }
