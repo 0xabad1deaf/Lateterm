@@ -40,7 +40,14 @@ public class App
         get(new Route("/handleClick") {
             @Override
             public Object handle(Request request, Response response) {
-                return "{\"message\": \"Hello World\"}";
+                if(game.gameType == true){
+                    game.player1.plays(request.x, request.y);
+                    game.player2.plays();
+                } else {
+                    game.currentPlayer.plays(request.x, request.y);
+                    game.handOverControl();
+                }
+                return game.grid.toJson();
             }
         });
 
