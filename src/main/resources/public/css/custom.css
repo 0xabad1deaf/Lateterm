@@ -1,0 +1,19 @@
+
+.main-game{
+    margin: 0 auto;
+    text-align: center;
+    border: none;
+}
+
+.main-game tr{
+    width: 450px;
+    height: 150px;
+}
+
+.main-game tr td{
+    width: 150px;
+    height: 150px;
+    border: solid 2px #333333;
+    text-align: center;
+}
+
