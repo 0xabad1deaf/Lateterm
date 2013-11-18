@@ -36,6 +36,11 @@ public class GameTest {
         game.playRound(1,1);
         game.playRound(1,1);
         assertEquals(compare.getAt(1,1), game.grid.getAt(1,1));
+        compare.set_o(2,0);
+        game.playRound(0,0);
+        game.playRound(2,0);
+        assertEquals(compare.getAt(1,1), game.grid.getAt(1,1));
+        assertEquals(compare.getAt(2,0), game.grid.getAt(2,0));
 	}
 
 	@Test

@@ -50,10 +50,15 @@ public class Game {
     public void playRound(int x, int y){
         if(gameType){
             grid.set_x(x,y);
-            grid.set_o(player2.random_coord(), player2.random_coord());
+            grid.set_o(((NPC)player2).random_coord(), ((NPC)player2).random_coord());
         } else {
-            grid.set_x(x,y);
-            switchPlayer();
+            if(currentPlayer == player1){
+                grid.set_x(x,y);
+                switchPlayer();
+            } else {
+                grid.set_o(x,y);
+                switchPlayer();
+            }
         }
     }
 
@@ -63,6 +68,12 @@ public class Game {
         } else {
             currentPlayer = player1;
         }
+    }
+                
+    public String getState(){
+        String wins = "{ wins1: \"" + player1.getWins() + "\", wins2: \"" + player2.getWins() + "\" }";
+        String json = "{ wins: \"" + wins + "\", matrix: \"" + grid.toJSON() + "\"}";
+        return json;
     }
 
 }
