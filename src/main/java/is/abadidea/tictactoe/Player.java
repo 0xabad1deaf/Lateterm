@@ -1,6 +1,6 @@
 package is.abadidea.tictactoe;
 
-public class Player {
+public abstract class Player {
 
     protected int wins;
 
