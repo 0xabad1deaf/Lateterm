@@ -44,6 +44,23 @@ public class GameTest {
 	}
 
 	@Test
+	public void playRoundWinsGame(){
+		Game game = new Game(false);
+		//test sould resault in a win
+        game.playRound(0,0);
+        game.playRound(2,0);
+        game.playRound(1,1);
+        game.playRound(2,1);
+        assertEquals(game.playRound(2,2), true);
+        game.grid.clearGrid();
+        //test sould not resault in a win
+        game.playRound(1,1);
+        game.playRound(0,0);
+        assertEquals(game.playRound(2,2), false);
+        game.grid.clearGrid();
+	}
+
+	@Test
 	public void gotWinnerMethod(){
 		Game game = new Game(true);
 
