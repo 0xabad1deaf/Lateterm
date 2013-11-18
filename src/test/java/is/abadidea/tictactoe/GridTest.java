@@ -62,7 +62,7 @@ public class GridTest {
         grid.set_x(1,1);
         grid.set_o(0,0);
         String json = grid.toJson();
-        String compare = "{ \"matrix\": [\"box00\": 2, \"box01\": 0, \"box02\": 0, \"box10\": 0, \"box11\": 1, \"box12\": 0, \"box20\": 0, \"box21\": 0, \"box22\": 0, ]}";
+        String compare = "{ \"matrix\": [2,0,0,0,1,0,0,0,0,0]}";
         assertEquals(compare.equals(json), true);
     }
 }

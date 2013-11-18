@@ -32,10 +32,10 @@ public class Grid {
        String json = "{ \"matrix\": [";
        for(int i = 0; i <= 2 ;++i){
            for(int j = 0; j <= 2; ++j){
-               json += "\"box" + i + j + "\": " + matrix[i][j] + ", ";
+               json += matrix[i][j] + ",";
            }
        }
-       json += "]}";
+       json += "0]}";
        return json;
    }
 }

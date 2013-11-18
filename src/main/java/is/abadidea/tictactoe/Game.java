@@ -54,9 +54,12 @@ public class Game {
             if(!(win = gotWinner()))
             	grid.set_o(((NPC)player2).random_coord(), ((NPC)player2).random_coord());
         } else {
+            System.out.println("pvp mode");
             if(currentPlayer == player1){
                 grid.set_x(x,y);
+                System.out.println("managed to set x");
                 if(!(win = gotWinner()))
+                    System.out.println("error here");
                 	switchPlayer();
             } else {
                 grid.set_o(x,y);
@@ -76,10 +79,9 @@ public class Game {
     }
                 
     public String getState(){
-        String wins = "{ wins1: \"" + player1.getWins() + "\", wins2: \"" + player2.getWins() + "\" }";
-        // String json = "{ wins: \"" + wins + "\", matrix: \"" + grid.toJson() + "\"}";
-        // return json;
-        return wins;
+        String wins = "{ \"wins1\": " + player1.getWins() + ", \"wins2\": " + player2.getWins() + " }";
+        String json = "{ \"wins\": " + wins + ", \"matrix\": " + grid.toJson() + "}";
+        return json;
     }
 
 }

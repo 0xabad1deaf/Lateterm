@@ -31,35 +31,35 @@
         <table class="main-game">
             <tr>
                 <td id="box00">
-                    <i class="fa fa-circle-o fa-5x"></i>
+                    <i class="fa fa-5x"></i>
                 </td>
                 <td id="box01">
-                    <i class="fa fa-check fa-5x"></i>
+                    <i class="fa fa-5x"></i>
                 </td>
                 <td id="box02">
-                    <i class="fa fa-check fa-5x"></i>
+                    <i class="fa fa-5x"></i>
                 </td>
             </tr>
             <tr>
                 <td id="box10">
-                    <i class="fa fa-circle-o fa-5x"></i>
+                    <i class="fa fa-5x"></i>
                 </td>
                 <td id="box11">
-                    <i class="fa fa-circle-o fa-5x"></i>
+                    <i class="fa fa-5x"></i>
                 </td>
                 <td id="box12">
-                    <i class="fa fa-check fa-5x"></i>
+                    <i class="fa fa-5x"></i>
                 </td>
             </tr>
             <tr>
                 <td id="box20">
-                    <i class="fa fa-circle-o fa-5x"></i>
+                    <i class="fa fa-5x"></i>
                 </td>
                 <td id="box21">
-                    <i class="fa fa-circle-o fa-5x"></i>
+                    <i class="fa fa-5x"></i>
                 </td>
                 <td id="box22">
-                    <i class="fa fa-circle-o fa-5x"></i>
+                    <i class="fa fa-5x"></i>
                 </td>
             </tr>
         </table>
@@ -72,9 +72,23 @@
 $( ".main-game tr td" ).click(function() {
     var x = this.id[3];
     var y = this.id[4];
-    alert( 'x: ' + x + ' y: ' +  y );
     $.get( "handleClick", {x: x, y: y}, function( data ) {
-        alert( "Load was performed." + data);
+        console.log(data);
+        var json = JSON.parse(data);
+        for(var i = 0; i <= 2 ; i++){
+            for(var j = 0; j <= 2; j++){
+                if(json.matrix.matrix[i*3+j] == 1){
+                    $('#box'+i+j + " i ").removeClass("fa-circle-o", "fa-check");
+                    $('#box'+i+j + " i ").addClass("fa-check");
+                }
+                else if(json.matrix.matrix[i*3+j] == 2){
+                    $('#box'+i+j + " i ").removeClass("fa-circle-o", "fa-check");
+                    $('#box'+i+j + " i ").addClass("fa-circle-o");
+                }
+                else
+                    $('#box'+i+j + " i ").removeClass("fa-circle-o", "fa-check");
+            }
+        }
     });
 });
 </script>
