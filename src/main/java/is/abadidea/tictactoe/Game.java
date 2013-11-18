@@ -4,15 +4,9 @@ public class Game {
 
 	public boolean gameType;
 	public Grid grid;
-<<<<<<< HEAD
 	public Player player1;
 	public Player player2;
 	public Player currentPlayer;
-=======
-	// public Player player1;
-	// public Player player2;
-	// public Player currentPlayer;
->>>>>>> c7a3be443932965cb77910920cf0213f8f7a9178
 
 	public Game(boolean typeOfGame)
 	{
