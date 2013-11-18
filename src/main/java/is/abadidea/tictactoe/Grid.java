@@ -16,6 +16,7 @@ public class Grid {
     public void set_o(int x, int y){
         if(matrix[x][y] == 0)
             matrix[x][y] = 2;
+
     }
     public int getAt(int x, int y){
         return matrix[x][y];
@@ -26,5 +27,15 @@ public class Grid {
                 matrix[i][j] = 0;
             }
         }
-    }
+   }
+   public String toJson(){
+       String json = "{ \"matrix\": [";
+       for(int i = 0; i <= 2 ;++i){
+           for(int j = 0; j <= 2; ++j){
+               json += "\"box" + i + j + "\": " + matrix[i][j] + ", ";
+           }
+       }
+       json += "]}";
+       return json;
+   }
 }
