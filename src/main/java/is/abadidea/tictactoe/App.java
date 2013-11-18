@@ -12,6 +12,9 @@ public class App
     {
         staticFileLocation("/public");
 
+        // Set port for heroku
+        setPort(Integer.valueOf(System.getenv("PORT")));
+
         get(new Route("/") {
             @Override
             public Object handle(Request request, Response response) {
