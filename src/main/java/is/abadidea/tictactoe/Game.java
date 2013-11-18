@@ -45,6 +45,24 @@ public class Game {
 			return true;
 
 		return false;
-
 	}	
+    
+    public void playRound(int x, int y){
+        if(gameType){
+            grid.set_x(x,y);
+            grid.set_o(player2.random_coord(), player2.random_coord());
+        } else {
+            grid.set_x(x,y);
+            switchPlayer();
+        }
+    }
+
+    public void switchPlayer(){
+        if(currentPlayer == player1){
+            currentPlayer = player2;
+        } else {
+            currentPlayer = player1;
+        }
+    }
+
 }

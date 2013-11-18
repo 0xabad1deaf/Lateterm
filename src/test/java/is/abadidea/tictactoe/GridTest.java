@@ -22,11 +22,22 @@ public class GridTest {
         assertEquals(grid.matrix[1][2], 0);
     }
     @Test
-    public void set_yMethodSetsY(){
+    public void set_oMethodSetsY(){
         Grid grid = new Grid();
-        grid.set_y(1,1);
+        grid.set_o(1,1);
         assertEquals(grid.matrix[1][1], 2);
         assertEquals(grid.matrix[1][2], 0);
+    }
+
+    @Test
+    public void setMethodsDontOverride(){
+        Grid grid = new Grid();
+        grid.set_o(1,1);
+        grid.set_x(1,1);
+        assertEquals(grid.getAt(1,1),2);
+        grid.set_x(0,0);
+        grid.set_o(0,0);
+        assertEquals(grid.getAt(0,0),1);
     }
 
     @Test
@@ -40,7 +51,7 @@ public class GridTest {
     public void clearGridMethod(){
         Grid grid = new Grid();
         grid.set_x(1,1);
-        grid.set_y(0,0);
+        grid.set_o(0,0);
         grid.clearGrid();
         assertEquals(grid.getAt(1,1), 0);
         assertEquals(grid.getAt(0,0), 0);

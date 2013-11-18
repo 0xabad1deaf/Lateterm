@@ -11,4 +11,7 @@ public class Player {
     public int getWins(){
         return wins;
     }
+    public int random_coord(){
+        return 0;
+    }
 }

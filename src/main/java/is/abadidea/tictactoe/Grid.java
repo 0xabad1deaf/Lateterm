@@ -9,11 +9,13 @@ public class Grid {
     }
 
     public void set_x(int x, int y){
-        matrix[x][y] = 1;
+        if(matrix[x][y] == 0)
+            matrix[x][y] = 1;
     }
 
-    public void set_y(int x, int y){
-        matrix[x][y] = 2;
+    public void set_o(int x, int y){
+        if(matrix[x][y] == 0)
+            matrix[x][y] = 2;
     }
     public int getAt(int x, int y){
         return matrix[x][y];
