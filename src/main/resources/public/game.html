@@ -73,17 +73,8 @@ $( ".main-game tr td" ).click(function() {
     var x = this.id[3];
     var y = this.id[4];
     alert( 'x: ' + x + ' y: ' +  y );
-    $.get(
-        "handleClick",
-        {x : this.id[3],
-         y : this.id[4]},
-        function(response) {
-            for(i = 0; i <= 2 ; i++){
-                for(j = 0; i <= 2; i++){
-                    //TODO:
-                }
-            }
-        }
-    );
+    $.get( "handleClick", {x: x, y: y}, function( data ) {
+        alert( "Load was performed." + data);
+    });
 });
 </script>

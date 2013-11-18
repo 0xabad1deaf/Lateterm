@@ -41,9 +41,15 @@ public class App
         get(new Route("/handleClick") {
             @Override
             public Object handle(Request request, Response response) {
-                boolean win = false; //game.playRound(Integer.parseInt(request.queryParams("x")), Integer.parseInt(request.queryParams("y")));
-                //if(!win)
-                    //return game.getState();
+                System.out.println("hello");
+                boolean win = false;
+                try{
+                    win = game.playRound(Integer.parseInt(request.queryParams("x")), Integer.parseInt(request.queryParams("y")));
+                } catch (java.lang.Exception e) {
+                }
+                System.out.println("winner?");
+                if(!win)
+                    return game.getState();
                 return "{ \"win\": true }";
             }
         });
