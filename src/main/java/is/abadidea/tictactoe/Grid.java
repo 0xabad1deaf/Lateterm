@@ -12,7 +12,7 @@ public class Grid {
         matrix[x][y] = 1;
     }
 
-    public void set_y(int x, int y){
+    public void set_o(int x, int y){
         matrix[x][y] = 2;
     }
     public int getAt(int x, int y){
@@ -24,5 +24,15 @@ public class Grid {
                 matrix[i][j] = 0;
             }
         }
-    }
+   }
+   public String toJson(){
+       String json = "{ ";
+       for(int i = 0; i <= 2 ;++i){
+           for(int j = 0; j <= 2; ++j){
+               json += "\"box" + i + j + "\": " + matrix[i][j] + ", ";
+           }
+       }
+       json += "}";
+       return json;
+   }
 }

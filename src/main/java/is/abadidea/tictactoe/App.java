@@ -1,5 +1,6 @@
 package is.abadidea.tictactoe;
 
+import java.lang.Integer;
 import static spark.Spark.*;
 import spark.*;
 
@@ -40,13 +41,7 @@ public class App
         get(new Route("/handleClick") {
             @Override
             public Object handle(Request request, Response response) {
-                if(game.gameType == true){
-                    game.player1.plays(request.x, request.y);
-                    game.player2.plays();
-                } else {
-                    game.currentPlayer.plays(request.x, request.y);
-                    game.handOverControl();
-                }
+                //game.play_round(Integer.parseInt(request.queryParams("x")), Integer.parseInt(request.queryParams("y")));
                 return game.grid.toJson();
             }
         });
