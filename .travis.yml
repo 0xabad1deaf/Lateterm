@@ -1,8 +1,9 @@
 language: java
- deploy:
+language: java
+deploy:
   provider: heroku
     api_key:
-        secure: cutaLCCC7IFoGj7QI7mX9dSfIx+3+nWpEk+VLqciPfi36M1BX1MHho79iA/k+hVtwwz9C8ibU    ETv63sUjydOoro/2FnGttgtx2LMwwdkx1QQXZGIRgIYA/D8h1aDgMW2XZg+cDBL3I674Gt4b/FGYM6LahW1Rn    /eUylbnEjEJq0=
+      secure: dabyIuFMfrnVX9eEMKb07B6X7Gp7ljHUb9sfQMVAIO2lAg/+6uV6mHK7csT2xTyVWyw67F/e7Si1ZmelcMDjFfFrqd2HoK+JH+Nv2mxC6KMpoBPPgdoeWZcuu9VE44FP9Tk3GcXSt1zlCKE1oVzQXYIfg2YoJFgRa0SQifn2B8E=
     app: tictactoes
-    on:
+      on:
         repo: 0xabad1deaf/Lateterm
