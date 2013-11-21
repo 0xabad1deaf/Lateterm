@@ -32,6 +32,15 @@ public class App
             }
         });
 
+        get(new Route("/replay") {
+            @Override
+            public Object handle(Request request, Response response) {
+                game.grid.clearGrid();
+                game.winner = 0;
+                game.full = false;
+            }
+        });
+
         get(new Route("/handleClick") {
             @Override
             public Object handle(Request request, Response response) {
