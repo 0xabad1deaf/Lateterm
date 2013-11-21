@@ -258,7 +258,23 @@
           </execution>
         </executions>
       </plugin>
-      
+      <!-- plugin that starts a selenium rc server running on local machine, opens a browser and runs the tests in the browser -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>selenium-maven-plugin</artifactId>
+        <version>1.0</version>
+        <executions>
+          <execution>
+            <phase>pre-integration-test</phase>
+            <goals>
+              <goal>start-server</goal>
+            </goals>
+            <configuration>
+              <background>true</background>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 
