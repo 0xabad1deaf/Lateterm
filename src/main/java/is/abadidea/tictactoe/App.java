@@ -35,9 +35,12 @@ public class App
         get(new Route("/replay") {
             @Override
             public Object handle(Request request, Response response) {
-                game.grid.clearGrid();
-                game.winner = 0;
-                game.full = false;
+                if(game != null){
+                    game.grid.clearGrid();
+                    game.winner = 0;
+                    game.full = false;
+                }
+                System.out.println(game.getState());
                 return game.getState();
             }
         });

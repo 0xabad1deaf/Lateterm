@@ -30,8 +30,8 @@
 
     <div id="result-box" class="hidden">
         <p class="results"></p>
-        <button type="button">Play Again?</button>
-        <button type="button" onclick="location.href='/game.html';">Main menu</button>
+        <button class="btn btn-success" type="button" onclick="replay()">Play Again?</button>
+        <button class="btn btn-warning" type="button" onclick="location.href='/game.html';">Main menu</button>
     </div>
 
     <div class="container">
@@ -82,7 +82,7 @@
             </tr>
         </table>
     </div>
-    <a href="game.html"><button id="surrender-button" class="hidden">Surrender?</button></a>
+    <a href="game.html"><button id="surrender-button" class="btn hidden">Surrender?</button></a>
   </body>
 </html>
 
@@ -97,55 +97,46 @@ $("#icon-menu button").click(function() {
 });
 
 
-$( ".main-game tr td" ).click(function() {
     
-    if ($('button#classic').hasClass("selected"))
-    {
-        var icon1 = 'fa-check';
-        var icon2 = 'fa-circle-o';
-    }
 
-    else if($('button#apple-android').hasClass("selected"))
-    {
-        var icon1 = 'fa-apple';
-        var icon2 = 'fa-android';
-    }
-
-    else if ($('button#male-female').hasClass("selected"))
-    {
-        var icon1 = 'fa-male';
-        var icon2 = 'fa-female';
-    }
-
+var handler = function(){
     var x = this.id[3];
     var y = this.id[4];
     $.get( "handleClick", {x: x, y: y}, function( data ) {
         console.log(data);
         var json = JSON.parse(data);
-        for(var i = 0; i <= 2 ; i++){
-            if(json.win === 1 || json.win === 2){
-                $('#result-box').removeClass('hidden');
-                $('p.results').html('Player ' + json.win + ' wins');
-            }
-            if(json.full === true && wins === 0){
-                $('#result-box').removeClass('hidden');
-                $('p.results').html('Nobody wins!');
-            }
-            for(var j = 0; j <= 2; j++){
-                if(json.matrix.matrix[i*3+j] == 1){
-                    $('#box'+i+j + " i ").removeClass(icon2, icon1);
-                    $('#box'+i+j + " i ").addClass(icon1);
-                }
-                else if(json.matrix.matrix[i*3+j] == 2){
-                    $('#box'+i+j + " i ").removeClass(icon2, icon1);
-                    $('#box'+i+j + " i ").addClass(icon2);
-                }
-                else
-                    $('#box'+i+j + " i ").removeClass(icon2, icon1);
-            }
+        populateGrid(json.matrix.matrix);
+        if(json.win === 1 || json.win === 2){
+            $('#result-box').removeClass('hidden');
+            $('p.results').html('Player ' + json.win + ' wins');
+        }
+        if(json.full == "true" && wins === 0){
+            $('#result-box').removeClass('hidden');
+            $('p.results').html('Nobody wins!');
         }
     });
-});
+}
+
+var populateGrid = function(matrix){
+    for(var i = 0; i <= 2 ; i++){
+        for(var j = 0; j <= 2; j++){
+            if(matrix[i*3+j] == 1){
+                $('#box'+i+j + " i ").removeClass(icon2 + " " + icon1);
+                $('#box'+i+j + " i ").addClass(icon1);
+                $('#box'+i+j + " i ").unbind("click");
+            }
+            else if(matrix[i*3+j] == 2){
+                $('#box'+i+j + " i ").removeClass(icon2 + " " + icon1);
+                $('#box'+i+j + " i ").addClass(icon2);
+                $('#box'+i+j + " i ").unbind("click");
+            }
+            else{
+                $('#box'+i+j + " i ").removeClass(icon2 + " " + icon1);
+            }
+        }
+    }
+}
+
 
 var init = function(sender){
     gametype = sender.id[3] == 1 ? true : false;
@@ -156,6 +147,32 @@ var init = function(sender){
         $("#icon-menu").addClass("hidden");
         $("#surrender-button").removeClass("hidden");
     });
+    if ($('button#classic').hasClass("selected"))
+    {
+        icon1 = 'fa-check';
+        icon2 = 'fa-circle-o';
+    }
+
+    else if($('button#apple-android').hasClass("selected"))
+    {
+        icon1 = 'fa-apple';
+        icon2 = 'fa-android';
+    }
+
+    else if ($('button#male-female').hasClass("selected"))
+    {
+        icon1 = 'fa-male';
+        icon2 = 'fa-female';
+    }
 }
+
+var replay = function(){
+    $.get("replay", function(data){
+        var json = JSON.parse(data);
+        populateGrid(json.matrix.matrix);
+        $('#result-box').addClass('hidden');
+    });
+}
+$( ".main-game tr td" ).bind("click", handler);
 
 </script>
