@@ -75,7 +75,7 @@
             </tr>
         </table>
     </div>
-    <a href="../"><button id="surrender-button">Surrender?</button></a>
+    <a href="game.html"><button id="surrender-button" class="hidden">Surrender?</button></a>
   </body>
 </html>
 
@@ -112,6 +112,7 @@ var init = function(sender){
         console.log("initialized game!");
         $(".main-game").removeClass("hidden");
         $("#type-select").addClass("hidden");
+        $("#surrender-button").removeClass("hidden");
     });
 }
 
