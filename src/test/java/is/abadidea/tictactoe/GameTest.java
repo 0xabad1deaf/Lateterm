@@ -61,6 +61,16 @@ public class GameTest {
 	}
 
     @Test
+    public void hasEnteryMethod(){
+        Game game = new Game(true);
+        game.grid.set_x(0,0);
+        assertEquals(game.hasEntery(0,0), true);
+        game.grid.set_x(2,1);
+        assertEquals(game.hasEntery(1,2), false);
+        assertEquals(game.hasEntery(2,1), true);
+    }
+
+    @Test
     public void gridFullMethod(){
         Game game = new Game(true);
         // check if a not full grid returns false

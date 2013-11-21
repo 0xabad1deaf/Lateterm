@@ -46,6 +46,10 @@ public class Game {
 		return false;
 	}	
 
+    public boolean hasEntery(int x, int y){
+        return(grid.matrix[x][y] != 0);
+    }
+
     public boolean gridFull()
     {
         boolean full = true;
@@ -64,7 +68,9 @@ public class Game {
     	boolean win = false;
         boolean success = false;
         if(gameType){
-            grid.set_x(x,y);
+            while(!hasEntery(x,y)){ // user must insert into empty cell
+                grid.set_x(x,y);
+            }
             if(!(win = gotWinner()))
                 do{
                     int a = ((NPC)player2).random_coord(), b = ((NPC)player2).random_coord();
@@ -73,11 +79,15 @@ public class Game {
 
         } else {
             if(currentPlayer == player1){
-                grid.set_x(x,y);
+                while(!hasEntery(x,y)){ // user must insert into empty cell
+                    grid.set_x(x,y);
+                }
                 if(!(win = gotWinner()))
                 	switchPlayer();
             } else {
-                grid.set_o(x,y);
+                while(!hasEntery(x,y)){ // user must insert into empty cell    
+                    grid.set_o(x,y);
+                }
                 if(!(win = gotWinner()))
                 	switchPlayer();
             }
