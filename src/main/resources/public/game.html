@@ -28,7 +28,11 @@
         <h1> Tic Tac Toes! </h1>
     </div>
     <div class="container">
-        <table class="main-game">
+        <div class="btn-group btn-group-lg" id="type-select">
+            <button type="button" class="btn btn-default" id="btn1" onclick="init(this)">Play vs. Computer</button>
+            <button type="button" class="btn btn-default" id="btn2" onclick="init(this)">Play vs. Human</button>
+        </div>
+        <table class="main-game hidden" >
             <tr>
                 <td id="box00">
                     <i class="fa fa-5x"></i>
@@ -91,4 +95,15 @@ $( ".main-game tr td" ).click(function() {
         }
     });
 });
+
+
+var init = function(sender){
+    gametype = sender.id[3] == 1 ? false : true;
+    $.get("initialize", {gametype : gametype}, function(data){
+        console.log("initialized game!");
+        $(".main-game").removeClass("hidden");
+        $("#type-select").addClass("hidden");
+    });
+}
+
 </script>

@@ -8,14 +8,20 @@ public class Grid {
         matrix = new int[3][3];
     }
 
-    public void set_x(int x, int y){
-        if(matrix[x][y] == 0)
+    public boolean set_x(int x, int y){
+        if(matrix[x][y] == 0){
             matrix[x][y] = 1;
+            return true;
+        }
+        return false;
     }
 
-    public void set_o(int x, int y){
-        if(matrix[x][y] == 0)
+    public boolean set_o(int x, int y){
+        if(matrix[x][y] == 0){
             matrix[x][y] = 2;
+            return true;
+        }
+        return false;
 
     }
     public int getAt(int x, int y){
