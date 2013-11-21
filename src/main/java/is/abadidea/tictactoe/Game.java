@@ -50,7 +50,7 @@ public class Game {
 		return false;
 	}	
 
-    public boolean hasEntery(int x, int y){
+    public boolean hasEntry(int x, int y){
         return(grid.matrix[x][y] != 0);
     }
 
@@ -72,7 +72,7 @@ public class Game {
     	boolean win = false;
         boolean success = false;
         if(gameType){
-            while(!hasEntery(x,y)){ // user must insert into empty cell
+            while(!hasEntry(x,y)){ // user must insert into empty cell
                 grid.set_x(x,y);
             }
             if(!(win = gotWinner()))
@@ -83,13 +83,13 @@ public class Game {
 
         } else {
             if(currentPlayer == player1){
-                while(!hasEntery(x,y)){ // user must insert into empty cell
+                while(!hasEntry(x,y)){ // user must insert into empty cell
                     grid.set_x(x,y);
                 }
                 if(!(win = gotWinner()))
                 	switchPlayer();
             } else {
-                while(!hasEntery(x,y)){ // user must insert into empty cell    
+                while(!hasEntry(x,y)){ // user must insert into empty cell    
                     grid.set_o(x,y);
                 }
                 if(!(win = gotWinner()))

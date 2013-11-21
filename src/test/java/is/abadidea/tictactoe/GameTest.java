@@ -61,13 +61,13 @@ public class GameTest {
 	}
 
     @Test
-    public void hasEnteryMethod(){
+    public void hasEntryMethod(){
         Game game = new Game(true);
         game.grid.set_x(0,0);
-        assertEquals(game.hasEntery(0,0), true);
+        assertEquals(game.hasEntry(0,0), true);
         game.grid.set_x(2,1);
-        assertEquals(game.hasEntery(1,2), false);
-        assertEquals(game.hasEntery(2,1), true);
+        assertEquals(game.hasEntry(1,2), false);
+        assertEquals(game.hasEntry(2,1), true);
     }
 
     @Test
