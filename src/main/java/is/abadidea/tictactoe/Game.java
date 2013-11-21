@@ -71,10 +71,11 @@ public class Game {
     public void playRound(int x, int y){
     	boolean win = false;
         boolean success = false;
+        if(hasEntry(x,y)){
+            return;
+        }
         if(gameType){
-            while(!hasEntry(x,y)){ // user must insert into empty cell
-                grid.set_x(x,y);
-            }
+            grid.set_x(x,y);
             if(!(win = gotWinner()))
                 do{
                     success = playNPC();
@@ -82,15 +83,11 @@ public class Game {
 
         } else {
             if(currentPlayer == player1){
-                while(!hasEntry(x,y)){ // user must insert into empty cell
-                    grid.set_x(x,y);
-                }
+                grid.set_x(x,y);
                 if(!(win = gotWinner()))
                 	switchPlayer();
             } else {
-                while(!hasEntry(x,y)){ // user must insert into empty cell    
-                    grid.set_o(x,y);
-                }
+                grid.set_o(x,y);
                 if(!(win = gotWinner()))
                 	switchPlayer();
             }
