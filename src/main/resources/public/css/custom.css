@@ -38,3 +38,13 @@
     text-align: center;
     padding: 50px;
 }
+
+#icon-menu
+{
+    margin-top: 5px;
+}
+
+.selected
+{
+    background: aliceblue;
+}

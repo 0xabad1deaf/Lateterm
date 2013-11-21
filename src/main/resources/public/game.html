@@ -39,6 +39,13 @@
             <button type="button" class="btn btn-default" id="btn1" onclick="init(this)">Play vs. Computer</button>
             <button type="button" class="btn btn-default" id="btn2" onclick="init(this)">Play vs. Human</button>
         </div>
+
+        <div id="icon-menu">
+            <button type="button" class="btn btn-default selected" id="classic">Classic <i class="fa fa-circle-o"></i> <i class="fa fa-check"></i></button>
+            <button type="button" class="btn btn-default" id="apple-android">Apple vs. Android <i class="fa fa-android"></i><i class="fa fa-apple"></i></button>
+            <button type="button" class="btn btn-default" id="male-female">Male vs. Female <i class="fa fa-male"></i><i class="fa fa-female"></i></button>
+        </div>
+
         <table class="main-game hidden" >
             <tr>
                 <td id="box00">
@@ -80,7 +87,36 @@
 </html>
 
 <script>
+
+var icon1 = 'fa-check';
+var icon2 = 'fa-circle-o';
+
+$("#icon-menu button").click(function() {
+  $("#icon-menu button" ).removeClass("selected");
+  $(this).addClass("selected");
+});
+
+
 $( ".main-game tr td" ).click(function() {
+    
+    if ($('button#classic').hasClass("selected"))
+    {
+        var icon1 = 'fa-check';
+        var icon2 = 'fa-circle-o';
+    }
+
+    else if($('button#apple-android').hasClass("selected"))
+    {
+        var icon1 = 'fa-apple';
+        var icon2 = 'fa-android';
+    }
+
+    else if ($('button#male-female').hasClass("selected"))
+    {
+        var icon1 = 'fa-male';
+        var icon2 = 'fa-female';
+    }
+
     var x = this.id[3];
     var y = this.id[4];
     $.get( "handleClick", {x: x, y: y}, function( data ) {
@@ -91,20 +127,19 @@ $( ".main-game tr td" ).click(function() {
             if(json.full === true){$('#result-box').removeClass('hidden');}
             for(var j = 0; j <= 2; j++){
                 if(json.matrix.matrix[i*3+j] == 1){
-                    $('#box'+i+j + " i ").removeClass("fa-circle-o", "fa-check");
-                    $('#box'+i+j + " i ").addClass("fa-check");
+                    $('#box'+i+j + " i ").removeClass(icon2, icon1);
+                    $('#box'+i+j + " i ").addClass(icon1);
                 }
                 else if(json.matrix.matrix[i*3+j] == 2){
-                    $('#box'+i+j + " i ").removeClass("fa-circle-o", "fa-check");
-                    $('#box'+i+j + " i ").addClass("fa-circle-o");
+                    $('#box'+i+j + " i ").removeClass(icon2, icon1);
+                    $('#box'+i+j + " i ").addClass(icon2);
                 }
                 else
-                    $('#box'+i+j + " i ").removeClass("fa-circle-o", "fa-check");
+                    $('#box'+i+j + " i ").removeClass(icon2, icon1);
             }
         }
     });
 });
-
 
 var init = function(sender){
     gametype = sender.id[3] == 1 ? true : false;
@@ -112,6 +147,7 @@ var init = function(sender){
         console.log("initialized game!");
         $(".main-game").removeClass("hidden");
         $("#type-select").addClass("hidden");
+        $("#icon-menu").addClass("hidden");
         $("#surrender-button").removeClass("hidden");
     });
 }
