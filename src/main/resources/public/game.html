@@ -87,7 +87,7 @@ $( ".main-game tr td" ).click(function() {
         console.log(data);
         var json = JSON.parse(data);
         for(var i = 0; i <= 2 ; i++){
-            if(json.win === 1){$('#result-box').removeClass('hidden');}
+            if(json.win === 1 || json.win === 2){$('#result-box').removeClass('hidden');}
             if(json.full === true){$('#result-box').removeClass('hidden');}
             for(var j = 0; j <= 2; j++){
                 if(json.matrix.matrix[i*3+j] == 1){
