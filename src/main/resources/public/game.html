@@ -110,8 +110,9 @@ var handler = function(){
             $('#result-box').removeClass('hidden');
             $('p.results').html('Player ' + json.win + ' wins');
         }
-        if(json.full == "true" && wins === 0){
+        if(json.full === true && json.win === 0){
             $('#result-box').removeClass('hidden');
+            console.log("full :(");
             $('p.results').html('Nobody wins!');
         }
     });
