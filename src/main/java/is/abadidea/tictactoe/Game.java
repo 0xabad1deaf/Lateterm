@@ -4,7 +4,7 @@ public class Game {
 
 	public boolean gameType;
     public boolean full;
-    public int win;
+    public int winner;
 	public Grid grid;
 	public Player player1;
 	public Player player2;
@@ -13,7 +13,7 @@ public class Game {
 	public Game(boolean typeOfGame)
 	{
 		gameType = typeOfGame;
-        win = 0;
+        winner = 0;
         this.full = false;
 		grid = new Grid();
 		this.player1 = new Player();
@@ -68,7 +68,7 @@ public class Game {
         return full;
     }
     
-    public boolean playRound(int x, int y){
+    public void playRound(int x, int y){
     	boolean win = false;
         boolean success = false;
         if(gameType){
@@ -96,8 +96,14 @@ public class Game {
                 	switchPlayer();
             }
         }
+        if(win){
+            if(currentPlayer == player1){
+                this.winner = 1;
+            } else {
+                this.winner = 2;
+            }
+        }
         this.full = gridFull();
-        return win;
     }
 
     public void switchPlayer(){
@@ -111,7 +117,7 @@ public class Game {
     public String getState(){
         String wins = "{ \"wins1\": " + player1.getWins() + ", \"wins2\": " + player2.getWins() + " }";
         String full = "\"full\": " + this.full;
-        String json = "{ \"wins\": " + wins + ", \"matrix\": " + grid.toJson() + ", " + full + ", \"win\": " + this.win + " }";
+        String json = "{ \"wins\": " + wins + ", \"matrix\": " + grid.toJson() + ", " + full + ", \"win\": " + this.winner + " }";
         return json;
     }
 

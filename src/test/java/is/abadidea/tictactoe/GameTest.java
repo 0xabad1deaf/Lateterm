@@ -51,12 +51,14 @@ public class GameTest {
         game.playRound(2,0);
         game.playRound(1,1);
         game.playRound(2,1);
-        assertEquals(game.playRound(2,2), true);
-        game.grid.clearGrid();
+        game.playRound(2,2);
+        assertEquals(game.winner, 1);
+        game = new Game(false);
         //test sould not resault in a win
         game.playRound(1,1);
         game.playRound(0,0);
-        assertEquals(game.playRound(2,2), false);
+        game.playRound(2,2);
+        assertEquals(game.winner, 0);
         game.grid.clearGrid();
 	}
 
