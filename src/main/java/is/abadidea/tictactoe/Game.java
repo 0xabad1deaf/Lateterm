@@ -99,7 +99,7 @@ public class Game {
         return win;
     }
 
-    public boolean playNPC(){
+    private boolean playNPC(){
         int a = ((NPC)player2).random_coord(), b = ((NPC)player2).random_coord();
         return grid.set_o(a,b);
     }
