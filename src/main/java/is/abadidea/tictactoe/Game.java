@@ -16,7 +16,6 @@ public class Game {
 		if(gameType)
 		{
 			this.player2 = new NPC();
-
 		}
 		else
 		{
