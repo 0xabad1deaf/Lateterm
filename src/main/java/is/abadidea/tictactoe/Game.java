@@ -3,6 +3,8 @@ package is.abadidea.tictactoe;
 public class Game {
 
 	public boolean gameType;
+    public boolean full;
+    public int win;
 	public Grid grid;
 	public Player player1;
 	public Player player2;
@@ -11,6 +13,8 @@ public class Game {
 	public Game(boolean typeOfGame)
 	{
 		gameType = typeOfGame;
+        win = 0;
+        this.full = false;
 		grid = new Grid();
 		this.player1 = new Player();
 		if(gameType)
@@ -82,6 +86,7 @@ public class Game {
                 	switchPlayer();
             }
         }
+        this.full = gridFull();
         return win;
     }
 
@@ -95,7 +100,8 @@ public class Game {
                 
     public String getState(){
         String wins = "{ \"wins1\": " + player1.getWins() + ", \"wins2\": " + player2.getWins() + " }";
-        String json = "{ \"wins\": " + wins + ", \"matrix\": " + grid.toJson() + "}";
+        String full = "\"full\": " + this.full;
+        String json = "{ \"wins\": " + wins + ", \"matrix\": " + grid.toJson() + ", " + full + ", \"win\": " + this.win + " }";
         return json;
     }
 
