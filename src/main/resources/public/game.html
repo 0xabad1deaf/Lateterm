@@ -98,7 +98,7 @@ $( ".main-game tr td" ).click(function() {
 
 
 var init = function(sender){
-    gametype = sender.id[3] == 1 ? false : true;
+    gametype = sender.id[3] == 1 ? true : false;
     $.get("initialize", {gametype : gametype}, function(data){
         console.log("initialized game!");
         $(".main-game").removeClass("hidden");
