@@ -77,8 +77,7 @@ public class Game {
             }
             if(!(win = gotWinner()))
                 do{
-                    int a = ((NPC)player2).random_coord(), b = ((NPC)player2).random_coord();
-                    success = grid.set_o(a,b);
+                    success = playNPC();
                 } while(!success);
 
         } else {
@@ -104,6 +103,11 @@ public class Game {
             }
         }
         this.full = gridFull();
+    }
+
+    private boolean playNPC(){
+        int a = ((NPC)player2).random_coord(), b = ((NPC)player2).random_coord();
+        return grid.set_o(a,b);
     }
 
     public void switchPlayer(){
