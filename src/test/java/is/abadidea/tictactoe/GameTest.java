@@ -61,6 +61,23 @@ public class GameTest {
 	}
 
     @Test
+    public void playNPCMethod()
+    {
+        Game game = new Game(true);
+
+        //grid is now empty and NPC can putt in any cell
+        assertEquals(game.playNPC(), true);
+        game.grid.clearGrid();
+        //filling the grid so that NPC can't place nothing in any cell 
+        for(int i = 0; i < 3; i++){
+            for (int j = 0; j < 3; j++) {
+                game.grid.set_x(i,j);
+            }
+        }
+        assertEquals(game.playNPC(), false);
+    }
+
+    @Test
     public void hasEntryMethod(){
         Game game = new Game(true);
         game.grid.set_x(0,0);
