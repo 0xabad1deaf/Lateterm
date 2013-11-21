@@ -17,8 +17,24 @@
     text-align: center;
 }
 
-#surrender-button
-{
+#surrender-button{
 	display: block;
 	margin: 10px auto 10px auto;
+}
+
+.hidden{
+    display: none;
+}
+
+#result-box
+{
+    background: aliceblue;
+    position: fixed;
+    height: 200px;
+    width: 400px;
+    margin: 0 auto;
+    left: 36%;
+    border: 1px solid black;
+    text-align: center;
+    padding: 50px;
 }

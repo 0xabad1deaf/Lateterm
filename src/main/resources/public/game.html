@@ -27,39 +27,50 @@
     <div class="jumbotron">
         <h1> Tic Tac Toes! </h1>
     </div>
+
+    <div id="result-box" class="hidden">
+        <p>Player 1 wins!</p>
+        <button type="button">Play Again?</button>
+        <button type="button" onclick="location.href='/game.html';">Main menu</button>
+    </div>
+
     <div class="container">
-        <table class="main-game">
+        <div class="btn-group btn-group-lg" id="type-select">
+            <button type="button" class="btn btn-default" id="btn1" onclick="init(this)">Play vs. Computer</button>
+            <button type="button" class="btn btn-default" id="btn2" onclick="init(this)">Play vs. Human</button>
+        </div>
+        <table class="main-game hidden" >
             <tr>
                 <td id="box00">
-                    <i class="fa fa-circle-o fa-5x"></i>
+                    <i class="fa fa-5x"></i>
                 </td>
                 <td id="box01">
-                    <i class="fa fa-check fa-5x"></i>
+                    <i class="fa fa-5x"></i>
                 </td>
                 <td id="box02">
-                    <i class="fa fa-check fa-5x"></i>
+                    <i class="fa fa-5x"></i>
                 </td>
             </tr>
             <tr>
                 <td id="box10">
-                    <i class="fa fa-circle-o fa-5x"></i>
+                    <i class="fa fa-5x"></i>
                 </td>
                 <td id="box11">
-                    <i class="fa fa-circle-o fa-5x"></i>
+                    <i class="fa fa-5x"></i>
                 </td>
                 <td id="box12">
-                    <i class="fa fa-check fa-5x"></i>
+                    <i class="fa fa-5x"></i>
                 </td>
             </tr>
             <tr>
                 <td id="box20">
-                    <i class="fa fa-circle-o fa-5x"></i>
+                    <i class="fa fa-5x"></i>
                 </td>
                 <td id="box21">
-                    <i class="fa fa-circle-o fa-5x"></i>
+                    <i class="fa fa-5x"></i>
                 </td>
                 <td id="box22">
-                    <i class="fa fa-circle-o fa-5x"></i>
+                    <i class="fa fa-5x"></i>
                 </td>
             </tr>
         </table>
@@ -72,18 +83,36 @@
 $( ".main-game tr td" ).click(function() {
     var x = this.id[3];
     var y = this.id[4];
-    alert( 'x: ' + x + ' y: ' +  y );
-    $.get(
-        "handleClick",
-        {x : this.id[3],
-         y : this.id[4]},
-        function(response) {
-            for(i = 0; i <= 2 ; i++){
-                for(j = 0; i <= 2; i++){
-                    //TODO:
+    $.get( "handleClick", {x: x, y: y}, function( data ) {
+        console.log(data);
+        var json = JSON.parse(data);
+        for(var i = 0; i <= 2 ; i++){
+            if(json.win === 1 || json.win === 2){$('#result-box').removeClass('hidden');}
+            if(json.full === true){$('#result-box').removeClass('hidden');}
+            for(var j = 0; j <= 2; j++){
+                if(json.matrix.matrix[i*3+j] == 1){
+                    $('#box'+i+j + " i ").removeClass("fa-circle-o", "fa-check");
+                    $('#box'+i+j + " i ").addClass("fa-check");
                 }
+                else if(json.matrix.matrix[i*3+j] == 2){
+                    $('#box'+i+j + " i ").removeClass("fa-circle-o", "fa-check");
+                    $('#box'+i+j + " i ").addClass("fa-circle-o");
+                }
+                else
+                    $('#box'+i+j + " i ").removeClass("fa-circle-o", "fa-check");
             }
         }
-    );
+    });
 });
+
+
+var init = function(sender){
+    gametype = sender.id[3] == 1 ? true : false;
+    $.get("initialize", {gametype : gametype}, function(data){
+        console.log("initialized game!");
+        $(".main-game").removeClass("hidden");
+        $("#type-select").addClass("hidden");
+    });
+}
+
 </script>

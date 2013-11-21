@@ -3,6 +3,8 @@
 *.swp
 *.swo
 
+bin/karisAwesomeScript
+
 # Package Files #
 *.jar
 *.war

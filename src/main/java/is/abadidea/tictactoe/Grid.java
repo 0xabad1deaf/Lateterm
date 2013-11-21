@@ -8,14 +8,20 @@ public class Grid {
         matrix = new int[3][3];
     }
 
-    public void set_x(int x, int y){
-        if(matrix[x][y] == 0)
+    public boolean set_x(int x, int y){
+        if(matrix[x][y] == 0){
             matrix[x][y] = 1;
+            return true;
+        }
+        return false;
     }
 
-    public void set_o(int x, int y){
-        if(matrix[x][y] == 0)
+    public boolean set_o(int x, int y){
+        if(matrix[x][y] == 0){
             matrix[x][y] = 2;
+            return true;
+        }
+        return false;
 
     }
     public int getAt(int x, int y){
@@ -32,10 +38,10 @@ public class Grid {
        String json = "{ \"matrix\": [";
        for(int i = 0; i <= 2 ;++i){
            for(int j = 0; j <= 2; ++j){
-               json += "\"box" + i + j + "\": " + matrix[i][j] + ", ";
+               json += matrix[i][j] + ",";
            }
        }
-       json += "]}";
+       json += "0]}";
        return json;
    }
 }

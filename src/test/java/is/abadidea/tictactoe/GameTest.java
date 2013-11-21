@@ -51,14 +51,69 @@ public class GameTest {
         game.playRound(2,0);
         game.playRound(1,1);
         game.playRound(2,1);
-        assertEquals(game.playRound(2,2), true);
-        game.grid.clearGrid();
+        game.playRound(2,2);
+        assertEquals(game.winner, 1);
+        game = new Game(false);
         //test sould not resault in a win
         game.playRound(1,1);
         game.playRound(0,0);
-        assertEquals(game.playRound(2,2), false);
+        game.playRound(2,2);
+        assertEquals(game.winner, 0);
         game.grid.clearGrid();
 	}
+
+    @Test
+    public void playNPCMethod()
+    {
+        Game game = new Game(true);
+
+        //grid is now empty and NPC can putt in any cell
+        assertEquals(game.playNPC(), true);
+        game.grid.clearGrid();
+        //filling the grid so that NPC can't place nothing in any cell 
+        for(int i = 0; i < 3; i++){
+            for (int j = 0; j < 3; j++) {
+                game.grid.set_x(i,j);
+            }
+        }
+        assertEquals(game.playNPC(), false);
+    }
+
+    @Test
+    public void hasEntryMethod(){
+        Game game = new Game(true);
+        game.grid.set_x(0,0);
+        assertEquals(game.hasEntry(0,0), true);
+        game.grid.set_x(2,1);
+        assertEquals(game.hasEntry(1,2), false);
+        assertEquals(game.hasEntry(2,1), true);
+    }
+
+    @Test
+    public void gridFullMethod(){
+        Game game = new Game(true);
+        // check if a not full grid returns false
+        game.grid.set_x(0,0);
+        game.grid.set_x(0,1);
+        game.grid.set_x(0,2);
+        assertEquals(game.gridFull(), false);
+        game.grid.clearGrid();
+        // check if gridFull() works for a grid only containing x
+        for(int i = 0; i < 3; i++){
+            for (int j = 0; j < 3; j++) {
+                game.grid.set_x(i,j);
+            }
+        }
+        assertEquals(game.gridFull(), true);
+        //check if gridFull() works if there are different signs in the grid
+        game.grid.clearGrid();
+        for(int i = 0; i < 3; i++){
+            game.grid.set_x(0,i);
+            game.grid.set_o(1,i);
+            game.grid.set_x(2,i);
+        }
+        assertEquals(game.gridFull(), true);
+    }
 
 	@Test
 	public void gotWinnerMethod(){
@@ -82,7 +137,7 @@ public class GameTest {
 		game.grid.clearGrid();
 		game.grid.set_o(0,1);
 		game.grid.set_o(1,1);
-		game.grid.set_o(0,2);
+		game.grid.set_o(2,1);
 		assertEquals(game.gotWinner(), true);
 		game.grid.clearGrid();
 		game.grid.set_x(0,2);
