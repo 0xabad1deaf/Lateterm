@@ -39,12 +39,10 @@ public class App
                 if(game == null){
                     System.out.println("ohoh");
                 }
-                win = game.playRound(x,y);
+                game.playRound(x,y);
                 System.out.println("bla");
                 System.out.println(game.getState());
-                if(!win)
-                    return game.getState();
-                return "{ \"win\": true }";
+                return game.getState();
             }
         });
 
