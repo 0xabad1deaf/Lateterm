@@ -46,6 +46,20 @@ public class Game {
 
 		return false;
 	}	
+
+    public boolean gridFull()
+    {
+        boolean full = true;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0 ; j < 3 ; j++) {
+                if(grid.matrix[i][j] == 0)
+                {
+                    full = false;
+                }
+            }
+        }
+        return full;
+    }
     
     public boolean playRound(int x, int y){
     	boolean win = false;
