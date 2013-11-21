@@ -137,7 +137,7 @@ public class GameTest {
 		game.grid.clearGrid();
 		game.grid.set_o(0,1);
 		game.grid.set_o(1,1);
-		game.grid.set_o(0,2);
+		game.grid.set_o(2,1);
 		assertEquals(game.gotWinner(), true);
 		game.grid.clearGrid();
 		game.grid.set_x(0,2);
