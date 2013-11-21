@@ -63,17 +63,19 @@ public class Game {
     
     public boolean playRound(int x, int y){
     	boolean win = false;
+        boolean success = false;
         if(gameType){
             grid.set_x(x,y);
             if(!(win = gotWinner()))
-            	grid.set_o(((NPC)player2).random_coord(), ((NPC)player2).random_coord());
+                do{
+                    int a = ((NPC)player2).random_coord(), b = ((NPC)player2).random_coord();
+                    success = grid.set_o(a,b);
+                } while(!success);
+
         } else {
-            System.out.println("pvp mode");
             if(currentPlayer == player1){
                 grid.set_x(x,y);
-                System.out.println("managed to set x");
                 if(!(win = gotWinner()))
-                    System.out.println("error here");
                 	switchPlayer();
             } else {
                 grid.set_o(x,y);

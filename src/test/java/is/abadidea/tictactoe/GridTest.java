@@ -24,9 +24,10 @@ public class GridTest {
     @Test
     public void set_oMethodSetsY(){
         Grid grid = new Grid();
-        grid.set_o(1,1);
+        boolean success = grid.set_o(1,1);
         assertEquals(grid.matrix[1][1], 2);
         assertEquals(grid.matrix[1][2], 0);
+        assertEquals(true, success);
     }
 
     @Test

@@ -16,25 +16,16 @@ public class App
             @Override
             public Object handle(Request request, Response response) {
                 response.redirect("/index.html");
-                return "Top O' the mornin' to ye, guv'nor!";
+                return null;
             }
         });
 
-        get(new Route("/pve") {
+        get(new Route("/initialize") {
             @Override
             public Object handle(Request request, Response response) {
-                game = new Game(true);
-                response.redirect("/game.html");
-                return "hehe";
-            }
-        });
-
-        get(new Route("/pvp") {
-            @Override
-            public Object handle(Request request, Response response) {
-                game = new Game(false);
-                response.redirect("/game.html");
-                return "hehe";
+                boolean gameType = Boolean.parseBoolean(request.queryParams("gametype"));
+                game = new Game(gameType);
+                return "hihi";
             }
         });
 
