@@ -38,6 +38,7 @@ public class App
                 game.grid.clearGrid();
                 game.winner = 0;
                 game.full = false;
+                return game.getState();
             }
         });
 
