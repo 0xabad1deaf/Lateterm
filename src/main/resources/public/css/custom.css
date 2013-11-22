@@ -17,6 +17,11 @@
     text-align: center;
 }
 
+#surrender-button{
+	display: block;
+	margin: 10px auto 10px auto;
+}
+
 .hidden{
     display: none;
 }
@@ -32,4 +37,14 @@
     border: 1px solid black;
     text-align: center;
     padding: 50px;
+}
+
+#icon-menu
+{
+    margin-top: 5px;
+}
+
+.selected
+{
+    background: aliceblue;
 }

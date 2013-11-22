@@ -12,6 +12,9 @@ public class App
     {
         staticFileLocation("/public");
 
+        // Set port for heroku
+        setPort(Integer.valueOf(System.getenv("PORT")));
+
         get(new Route("/") {
             @Override
             public Object handle(Request request, Response response) {
@@ -26,6 +29,19 @@ public class App
                 boolean gameType = Boolean.parseBoolean(request.queryParams("gametype"));
                 game = new Game(gameType);
                 return "hihi";
+            }
+        });
+
+        get(new Route("/replay") {
+            @Override
+            public Object handle(Request request, Response response) {
+                if(game != null){
+                    game.grid.clearGrid();
+                    game.winner = 0;
+                    game.full = false;
+                }
+                System.out.println(game.getState());
+                return game.getState();
             }
         });
 
