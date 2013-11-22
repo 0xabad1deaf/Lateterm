@@ -23,9 +23,11 @@ public class firefoxTest
 		driver.get("http://tictactoes.co.vu/index.html");
 
 		assertTrue(driver.getTitle().startsWith("Tic Tac Toes!"));
+		driver.findElement(By.id("playnow!")).click();
+		driver.close();
 	}
 
-	@Test
+	/*@Test
 	public void firefoxIsSupportedByWebdriver(){
 		WebDriver driver = new FirefoxDriver();
 
@@ -33,7 +35,7 @@ public class firefoxTest
 		assertTrue(driver.getTitle().startsWith("Tic Tac Toes!"));
 		//driver.findElement(By.id("playnow!")).click();
 		driver.close();
-	}
+	}*/
 
 	/*private boolean isElementPresent(By by) {	//function for checking whether element is there
 	    try {
