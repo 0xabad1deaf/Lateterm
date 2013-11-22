@@ -1,11 +1,9 @@
 language: java
-env:
-  global:
-    - secure: "AoH6IfJwxtReNcKvskIv+tTLbbpkZi7E+CJPN9X007V8ozF+Ve0KblqJRAWfBxivbNNzqF3ZTlOxavzf2Lt7LI8H4Pp4krESRd58eCTCdj27tas44R2sc2AgrU1XuHaTsovYDKSRbQnHpnxwxcAPeP/f/14rWBQ2ejfadTt6QTk="
-    - secure: "19374220-fef6-4897-8922-fa92f7142053"
 
-before_script:
-  - curl https://gist.github.com/santiycr/5139565/raw/sauce_connect_setup.sh | bash
+addons:
+  sauce_connect:
+    username: "joiblumen"
+    access_key: "19374220-fef6-4897-8922-fa92f7142053"
 
 deploy:
   provider: heroku
