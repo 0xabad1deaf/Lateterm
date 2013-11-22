@@ -29,6 +29,7 @@ public class WebDriverTest {
         DesiredCapabilities capabilities = DesiredCapabilities.firefox();
         capabilities.setCapability("version", "25");
         capabilities.setCapability("platform", Platform.WIN8);
+        capabilities.setCapability("tunnel-identifier",System.getenv(TRAVIS_JOB_NUMBER))
         this.driver = new RemoteWebDriver(
                 new URL("http://joiblumen:19374220-fef6-4897-8922-fa92f7142053@ondemand.saucelabs.com:80/wd/hub"),
                 capabilities);
