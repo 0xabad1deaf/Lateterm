@@ -38,7 +38,7 @@ public class WebDriverTest {
 
     @Test
     public void CheckTitleName() throws Exception {
-        driver.get("http://tictactoes.co.vu/index.html");
+        driver.get("127.0.0.1:60040");
         assertEquals("Tic Tac Toes!",driver.getTitle());
     }
 
