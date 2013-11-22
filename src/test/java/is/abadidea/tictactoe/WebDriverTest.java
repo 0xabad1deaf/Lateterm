@@ -13,6 +13,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.URL;
 
 import static org.junit.Assert.assertEquals;
+import com.saucelabs.common.Utils;
 
 /**
  * Simple {@link RemoteWebDriver} test that demonstrates how to run your Selenium tests with <a href="http://saucelabs.com/ondemand">Sauce OnDemand</a>.
@@ -29,7 +30,7 @@ public class WebDriverTest {
         DesiredCapabilities capabilities = DesiredCapabilities.firefox();
         capabilities.setCapability("version", "25");
         capabilities.setCapability("platform", Platform.WIN8);
-        capabilities.setCapability("tunnel-identifier",System.getenv(TRAVIS_JOB_NUMBER))
+        capabilities.setCapability("tunnel-identifier",Utils.readPropertyOrEnv("TRAVIS_JOB_NUMBER",""));
         this.driver = new RemoteWebDriver(
                 new URL("http://joiblumen:19374220-fef6-4897-8922-fa92f7142053@ondemand.saucelabs.com:80/wd/hub"),
                 capabilities);
