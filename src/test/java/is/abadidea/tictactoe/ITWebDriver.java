@@ -9,6 +9,8 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.By;
+
 
 import java.net.URL;
 
@@ -42,6 +44,19 @@ public class ITWebDriver {
         assertEquals("Tic Tac Toes!",driver.getTitle());
     }
 
+    @Test
+    public void CheckPlayNowButton() throws Exception {
+        driver.get("http://localhost:4567");
+        driver.findElement(By.id("playnow")).click();
+        assertEquals(driver.getCurrentUrl(), "http://localhost:4567/game.html");
+    }
+
+    @Test
+    public void CheckPlayVsComputerButton() throws Exception {
+        driver.get("http://localhost:4567/game.html");
+        driver.findElement(By.id("btn1")).click();
+        assertEquals(driver.getCurrentUrl(), "http://localhost:4567/game.html");
+    }
 
     @After
     public void tearDown() throws Exception {
