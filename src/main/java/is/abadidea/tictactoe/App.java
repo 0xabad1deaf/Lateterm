@@ -19,7 +19,7 @@ public class App
             @Override
             public Object handle(Request request, Response response) {
                 response.redirect("/index.html");
-                return null;
+                return "Top O' the mornin' to ye, guv'nor!";
             }
         });
 
