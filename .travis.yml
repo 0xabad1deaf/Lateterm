@@ -10,8 +10,10 @@ before_script:
 
 script:
   - "bin/run"
+  - sleep 3
 
 after_script:
+  - "bin/clean"
   - "bin/it_test"
 
 deploy:
