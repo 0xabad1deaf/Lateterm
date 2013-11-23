@@ -4,5 +4,6 @@ if [[ -z "$TRAVIS_JOB_NUMBER" ]]
 then
     .//bin/all_tests_local
 else
+    cd ..
     mvn verify
 fi
