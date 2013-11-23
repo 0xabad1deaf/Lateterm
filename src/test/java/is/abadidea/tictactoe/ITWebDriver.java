@@ -56,37 +56,33 @@ public class ITWebDriver {
     }
 
     /*@Test
-    public void CheckGrid00() throws Exception {
-        driver.get("http://localhost:4567/game.html");
-        driver.findElement(By.xpath("html/body/div[3]/div[1]/button[1]")).click();
-        driver.findElement(By.xpath("html/body/div[3]/table/tbody/tr[1]/td[1]")).click();
-
-        WebElement a = driver.findElement(By.xpath("html/body/div[3]/table/tbody/tr[1]/td[1]/i"));
-
-
-        //driver.findElement(By.id("box00")).click();
-        //WebElement  i = driver.findElement(By.cssSelector("#box00 fa fa-5x"));
-        WebElement  i = driver.findElement(By.cssSelector("@class fa fa-5x fa-check"));
-        assertTrue(i.isEnabled());
-    }*/
-
-
-    @Test
     public void CheckPlayerVsComputerButton() throws Exception {
          driver.get("http://localhost:4567/game.html");
          driver.findElement(By.id("btn1")).click();
          assertEquals(driver.findElement(By.className("main-game")).isDisplayed(), true);
          driver.close();
-    }
+    }*/
 
     @Test 
-    public void  CheckPlayerVsPlayerButton() throws Exception {
+    public void CheckPlayerVsPlayerButton() throws Exception {
          driver.get("http://localhost:4567/game.html");
          driver.findElement(By.id("btn2")).click();
          assertEquals(driver.findElement(By.className("main-game")).isDisplayed(), true);
          driver.close();
     }
 
+    @Test
+    public void CheckResultBox() throws Exception {
+         driver.get("http://localhost:4567/game.html");
+         driver.findElement(By.id("btn2")).click();
+         driver.findElement(By.id("box00")).click();
+         driver.findElement(By.id("box20")).click();
+         driver.findElement(By.id("box01")).click();
+         driver.findElement(By.id("box10")).click();
+         driver.findElement(By.id("box02")).click();
+         assertEquals(driver.findElement(By.id("result-box")).isDisplayed(), true);
+    }
+    
     @After
     public void tearDown() throws Exception {
         driver.quit();
