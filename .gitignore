@@ -4,6 +4,7 @@
 *.swo
 
 bin/karisAwesomeScript
+Sauce-Connect.jar
 
 # Package Files #
 *.jar
