@@ -1,19 +1,39 @@
 TicTacToes
 ==========
 So easy, you could play with your toes!
-Live at: http://tictactoes.co.vu/
+Try it at: http://tictactoes.co.vu/
+
+Development setup for osx
+--------------------------
+
+1. Navigate to: https://tictacboxen.herokuapp.com/
+2. Copy script to terminal and run boxen
+3. Get yourself some coffee while script finishes.
+
+Thats it!
+
+Boxen automagically sets up everything you would ever need to develop
+tictactoes on your mac. Including git, java, maven and a whole bunch of other
+things.
+
+You can find all the config files for our boxen here: https://github.com/0xabad1deaf/boxen
+This is how we set up all our new macs here at 0xabad1dea
+
+What about linux, or windows?
+Boxen only works on Mac OS X (Mountain Lion or above) and that's what we hack on every day.
+See below for basic linux/Windows tictactoe development setup requirements.
 
 Prerequisites
-----
+------------
 To run Tic Tac Toes on your local machine you will need the following:
 
-- A unix-based operating system
 - Git
-- Java 1.7+
+- Java 1.7
 - Maven
+- If you are on windows, you will need to setup Powershell or a bash shell e.g putty or equivalent before anything else.
 
 Quick Start
-------
+-----------
 
 1. Clone the repo to your local machine
     git clone https://github.com/0xabad1deaf/Lateterm
