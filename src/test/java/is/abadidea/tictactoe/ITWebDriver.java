@@ -116,7 +116,11 @@ public class ITWebDriver implements SauceOnDemandSessionIdProvider {
          driver.findElement(By.id("box01")).click();
          driver.findElement(By.id("box10")).click();
          driver.findElement(By.id("box02")).click();
-         assertEquals(driver.findElement(By.id("result-box")).isDisplayed(), true);
+         (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver d) {
+                return d.findElement(By.id("result-box")).isDisplayed();
+            }
+        });
     }
     
     @After
