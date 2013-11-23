@@ -6,6 +6,9 @@
 .//bin/clean
 .//bin/package
 
+#java -jar Sauce-Connect.jar --readyfile $READY_FILE \
+#    --tunnel-identifier $TRAVIS_JOB_NUMBER \
+#    joiblumen 19374220-fef6-4897-8922-fa92f7142053 &
 java -jar Sauce-Connect.jar --readyfile $READY_FILE \
 joiblumen 19374220-fef6-4897-8922-fa92f7142053 &
 
