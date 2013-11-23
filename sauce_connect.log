@@ -170,3 +170,265 @@ Read http://saucelabs.com/docs/connect#tunnel-identifier for more details.
 2013-11-23 15:35:11,944 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
 2013-11-23 15:35:11,953 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (8ms, 296 bytes)
 2013-11-23 15:35:12,338 - sauce_connect:0 - INFO - GET http://code.jquery.com/jquery-1.9.1.min.js -> 200 (705ms, 92629 bytes)
+2013-11-23 15:59:25,144 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/
+2013-11-23 15:59:25,153 - sauce_connect:0 - INFO - GET http://localhost:4567/ -> 302 (7ms, 0 bytes)
+2013-11-23 15:59:25,494 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/index.html
+2013-11-23 15:59:25,503 - sauce_connect:0 - INFO - GET http://localhost:4567/index.html -> 200 (7ms, 1209 bytes)
+2013-11-23 15:59:26,109 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 15:59:26,109 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 15:59:26,118 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (7ms, 632 bytes)
+2013-11-23 15:59:26,119 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (10ms, 296 bytes)
+2013-11-23 15:59:26,775 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 15:59:26,782 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (9ms, 296 bytes)
+2013-11-23 15:59:40,548 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/game.html
+2013-11-23 15:59:40,553 - sauce_connect:0 - INFO - GET http://localhost:4567/game.html -> 200 (6ms, 5887 bytes)
+2013-11-23 15:59:41,075 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 15:59:41,075 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 15:59:41,082 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (7ms, 632 bytes)
+2013-11-23 15:59:41,099 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (24ms, 296 bytes)
+2013-11-23 15:59:41,743 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 15:59:41,743 - sauce_connect:0 - INFO - Request started: GET http://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.woff?v=4.0.3
+2013-11-23 15:59:41,750 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (8ms, 296 bytes)
+2013-11-23 15:59:41,992 - sauce_connect:0 - INFO - GET http://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.woff?v=4.0.3 -> 200 (248ms, 44432 bytes)
+2013-11-23 15:59:44,233 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/initialize?gametype=true
+2013-11-23 15:59:44,239 - sauce_connect:0 - INFO - GET http://localhost:4567/initialize?gametype=true -> 200 (5ms, 4 bytes)
+2013-11-23 16:00:01,130 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/
+2013-11-23 16:00:01,134 - sauce_connect:0 - INFO - GET http://localhost:4567/ -> 302 (5ms, 0 bytes)
+2013-11-23 16:00:01,403 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/index.html
+2013-11-23 16:00:01,407 - sauce_connect:0 - INFO - GET http://localhost:4567/index.html -> 200 (5ms, 1209 bytes)
+2013-11-23 16:00:01,848 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:00:01,848 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:00:01,852 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (5ms, 632 bytes)
+2013-11-23 16:00:01,857 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (8ms, 296 bytes)
+2013-11-23 16:00:02,269 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:00:02,279 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (9ms, 296 bytes)
+2013-11-23 16:00:03,196 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/game.html
+2013-11-23 16:00:03,200 - sauce_connect:0 - INFO - GET http://localhost:4567/game.html -> 200 (5ms, 5887 bytes)
+2013-11-23 16:00:03,894 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:00:03,901 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (5ms, 632 bytes)
+2013-11-23 16:00:04,670 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/favicon.ico
+2013-11-23 16:00:04,677 - sauce_connect:0 - INFO - GET http://localhost:4567/favicon.ico -> 404 (7ms, 289 bytes)
+2013-11-23 16:05:28,911 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/
+2013-11-23 16:05:28,917 - sauce_connect:0 - INFO - GET http://localhost:4567/ -> 302 (7ms, 0 bytes)
+2013-11-23 16:05:29,354 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/index.html
+2013-11-23 16:05:29,359 - sauce_connect:0 - INFO - GET http://localhost:4567/index.html -> 200 (6ms, 1209 bytes)
+2013-11-23 16:05:29,798 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:05:29,798 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:05:29,802 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (6ms, 632 bytes)
+2013-11-23 16:05:29,806 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (9ms, 296 bytes)
+2013-11-23 16:05:30,181 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:05:30,190 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (9ms, 296 bytes)
+2013-11-23 16:05:44,892 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/game.html
+2013-11-23 16:05:44,898 - sauce_connect:0 - INFO - GET http://localhost:4567/game.html -> 200 (6ms, 5887 bytes)
+2013-11-23 16:05:45,729 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:05:45,729 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:05:45,736 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (6ms, 632 bytes)
+2013-11-23 16:05:45,740 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (10ms, 296 bytes)
+2013-11-23 16:05:46,427 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:05:46,437 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (9ms, 296 bytes)
+2013-11-23 16:05:47,150 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/initialize?gametype=false
+2013-11-23 16:05:47,154 - sauce_connect:0 - INFO - GET http://localhost:4567/initialize?gametype=false -> 200 (5ms, 4 bytes)
+2013-11-23 16:07:17,081 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/
+2013-11-23 16:07:17,086 - sauce_connect:0 - INFO - GET http://localhost:4567/ -> 302 (6ms, 0 bytes)
+2013-11-23 16:07:17,361 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/index.html
+2013-11-23 16:07:17,367 - sauce_connect:0 - INFO - GET http://localhost:4567/index.html -> 200 (6ms, 1209 bytes)
+2013-11-23 16:07:18,032 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:07:18,032 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:07:18,036 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (6ms, 632 bytes)
+2013-11-23 16:07:18,040 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (9ms, 296 bytes)
+2013-11-23 16:07:18,674 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:07:18,683 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (9ms, 296 bytes)
+2013-11-23 16:07:32,414 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/
+2013-11-23 16:07:32,417 - sauce_connect:0 - INFO - GET http://localhost:4567/ -> 302 (5ms, 0 bytes)
+2013-11-23 16:07:33,028 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/index.html
+2013-11-23 16:07:33,032 - sauce_connect:0 - INFO - GET http://localhost:4567/index.html -> 200 (5ms, 1209 bytes)
+2013-11-23 16:07:33,694 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:07:33,694 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:07:33,698 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (4ms, 632 bytes)
+2013-11-23 16:07:33,701 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (8ms, 296 bytes)
+2013-11-23 16:07:34,177 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:07:34,187 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (9ms, 296 bytes)
+2013-11-23 16:07:35,170 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/game.html
+2013-11-23 16:07:35,174 - sauce_connect:0 - INFO - GET http://localhost:4567/game.html -> 200 (4ms, 5887 bytes)
+2013-11-23 16:07:35,671 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:07:35,676 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (5ms, 632 bytes)
+2013-11-23 16:07:36,325 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/favicon.ico
+2013-11-23 16:07:36,332 - sauce_connect:0 - INFO - GET http://localhost:4567/favicon.ico -> 404 (8ms, 289 bytes)
+2013-11-23 16:07:51,003 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/game.html
+2013-11-23 16:07:51,009 - sauce_connect:0 - INFO - GET http://localhost:4567/game.html -> 200 (6ms, 5887 bytes)
+2013-11-23 16:07:51,460 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:07:51,460 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:07:51,466 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (6ms, 632 bytes)
+2013-11-23 16:07:51,470 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (10ms, 296 bytes)
+2013-11-23 16:07:51,993 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:07:52,000 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (7ms, 296 bytes)
+2013-11-23 16:07:52,892 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/initialize?gametype=true
+2013-11-23 16:07:52,897 - sauce_connect:0 - INFO - GET http://localhost:4567/initialize?gametype=true -> 200 (4ms, 4 bytes)
+2013-11-23 16:07:53,611 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/handleClick?x=0&y=0
+2013-11-23 16:07:53,615 - sauce_connect:0 - INFO - GET http://localhost:4567/handleClick?x=0&y=0 -> 200 (5ms, 109 bytes)
+2013-11-23 16:09:28,845 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/
+2013-11-23 16:09:28,851 - sauce_connect:0 - INFO - GET http://localhost:4567/ -> 302 (5ms, 0 bytes)
+2013-11-23 16:09:29,082 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/index.html
+2013-11-23 16:09:29,088 - sauce_connect:0 - INFO - GET http://localhost:4567/index.html -> 200 (6ms, 1209 bytes)
+2013-11-23 16:09:29,989 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:09:29,989 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:09:29,993 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (6ms, 632 bytes)
+2013-11-23 16:09:29,997 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (8ms, 296 bytes)
+2013-11-23 16:09:30,381 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:09:30,388 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (9ms, 296 bytes)
+2013-11-23 16:09:44,819 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/
+2013-11-23 16:09:44,825 - sauce_connect:0 - INFO - GET http://localhost:4567/ -> 302 (5ms, 0 bytes)
+2013-11-23 16:09:45,355 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/index.html
+2013-11-23 16:09:45,361 - sauce_connect:0 - INFO - GET http://localhost:4567/index.html -> 200 (7ms, 1209 bytes)
+2013-11-23 16:09:46,049 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:09:46,053 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (5ms, 632 bytes)
+2013-11-23 16:09:46,269 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:09:46,279 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (9ms, 296 bytes)
+2013-11-23 16:09:47,276 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:09:47,283 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (8ms, 296 bytes)
+2013-11-23 16:09:47,805 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/game.html
+2013-11-23 16:09:47,812 - sauce_connect:0 - INFO - GET http://localhost:4567/game.html -> 200 (7ms, 5887 bytes)
+2013-11-23 16:09:48,420 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:09:48,424 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (4ms, 632 bytes)
+2013-11-23 16:09:49,035 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/favicon.ico
+2013-11-23 16:09:49,042 - sauce_connect:0 - INFO - GET http://localhost:4567/favicon.ico -> 404 (8ms, 289 bytes)
+2013-11-23 16:10:02,944 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/game.html
+2013-11-23 16:10:02,948 - sauce_connect:0 - INFO - GET http://localhost:4567/game.html -> 200 (6ms, 5887 bytes)
+2013-11-23 16:10:03,559 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:10:03,559 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:10:03,565 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (7ms, 632 bytes)
+2013-11-23 16:10:03,568 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (10ms, 296 bytes)
+2013-11-23 16:10:04,173 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:10:04,181 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (9ms, 296 bytes)
+2013-11-23 16:10:05,095 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/initialize?gametype=true
+2013-11-23 16:10:05,101 - sauce_connect:0 - INFO - GET http://localhost:4567/initialize?gametype=true -> 200 (8ms, 4 bytes)
+2013-11-23 16:13:40,358 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/
+2013-11-23 16:13:40,365 - sauce_connect:0 - INFO - GET http://localhost:4567/ -> 302 (6ms, 0 bytes)
+2013-11-23 16:13:40,802 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/index.html
+2013-11-23 16:13:40,808 - sauce_connect:0 - INFO - GET http://localhost:4567/index.html -> 200 (6ms, 1209 bytes)
+2013-11-23 16:13:41,282 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:13:41,286 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (5ms, 632 bytes)
+2013-11-23 16:13:41,505 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:13:41,510 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (6ms, 296 bytes)
+2013-11-23 16:13:42,392 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:13:42,401 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (8ms, 296 bytes)
+2013-11-23 16:13:57,111 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/
+2013-11-23 16:13:57,115 - sauce_connect:0 - INFO - GET http://localhost:4567/ -> 302 (4ms, 0 bytes)
+2013-11-23 16:13:57,648 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/index.html
+2013-11-23 16:13:57,654 - sauce_connect:0 - INFO - GET http://localhost:4567/index.html -> 200 (6ms, 1209 bytes)
+2013-11-23 16:13:58,569 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:13:58,569 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:13:58,573 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (4ms, 632 bytes)
+2013-11-23 16:13:58,578 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (9ms, 296 bytes)
+2013-11-23 16:13:59,407 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:13:59,414 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (8ms, 296 bytes)
+2013-11-23 16:14:00,022 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/game.html
+2013-11-23 16:14:00,026 - sauce_connect:0 - INFO - GET http://localhost:4567/game.html -> 200 (5ms, 5887 bytes)
+2013-11-23 16:14:00,413 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:14:00,415 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (4ms, 632 bytes)
+2013-11-23 16:14:00,855 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/favicon.ico
+2013-11-23 16:14:00,861 - sauce_connect:0 - INFO - GET http://localhost:4567/favicon.ico -> 404 (6ms, 289 bytes)
+2013-11-23 16:14:15,773 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/game.html
+2013-11-23 16:14:15,779 - sauce_connect:0 - INFO - GET http://localhost:4567/game.html -> 200 (6ms, 5887 bytes)
+2013-11-23 16:14:16,671 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:14:16,671 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:14:16,676 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (6ms, 632 bytes)
+2013-11-23 16:14:16,680 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (9ms, 296 bytes)
+2013-11-23 16:14:16,971 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:14:16,980 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (8ms, 296 bytes)
+2013-11-23 16:14:17,897 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/initialize?gametype=true
+2013-11-23 16:14:17,901 - sauce_connect:0 - INFO - GET http://localhost:4567/initialize?gametype=true -> 200 (4ms, 4 bytes)
+2013-11-23 16:14:18,845 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/handleClick?x=0&y=0
+2013-11-23 16:14:18,849 - sauce_connect:0 - INFO - GET http://localhost:4567/handleClick?x=0&y=0 -> 200 (5ms, 109 bytes)
+2013-11-23 16:40:37,029 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/
+2013-11-23 16:40:37,040 - sauce_connect:0 - INFO - GET http://localhost:4567/ -> 302 (12ms, 0 bytes)
+2013-11-23 16:40:37,878 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/index.html
+2013-11-23 16:40:37,884 - sauce_connect:0 - INFO - GET http://localhost:4567/index.html -> 200 (8ms, 1209 bytes)
+2013-11-23 16:40:38,184 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:40:38,188 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (5ms, 632 bytes)
+2013-11-23 16:40:38,490 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:40:38,497 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (7ms, 296 bytes)
+2013-11-23 16:40:39,023 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:40:39,032 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (8ms, 296 bytes)
+2013-11-23 16:40:53,151 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/game.html
+2013-11-23 16:40:53,158 - sauce_connect:0 - INFO - GET http://localhost:4567/game.html -> 200 (8ms, 5887 bytes)
+2013-11-23 16:40:53,543 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:40:53,549 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (5ms, 632 bytes)
+2013-11-23 16:40:53,851 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:40:53,859 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (8ms, 296 bytes)
+2013-11-23 16:40:54,301 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:40:54,323 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (23ms, 296 bytes)
+2013-11-23 16:40:55,082 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/initialize?gametype=false
+2013-11-23 16:40:55,086 - sauce_connect:0 - INFO - GET http://localhost:4567/initialize?gametype=false -> 200 (5ms, 4 bytes)
+2013-11-23 16:41:09,433 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/game.html
+2013-11-23 16:41:09,437 - sauce_connect:0 - INFO - GET http://localhost:4567/game.html -> 200 (5ms, 5887 bytes)
+2013-11-23 16:41:10,132 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:41:10,132 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:41:10,138 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (5ms, 632 bytes)
+2013-11-23 16:41:10,141 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (9ms, 296 bytes)
+2013-11-23 16:41:10,970 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:41:10,977 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (7ms, 296 bytes)
+2013-11-23 16:41:11,673 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/initialize?gametype=true
+2013-11-23 16:41:11,677 - sauce_connect:0 - INFO - GET http://localhost:4567/initialize?gametype=true -> 200 (4ms, 4 bytes)
+2013-11-23 16:41:26,020 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/
+2013-11-23 16:41:26,023 - sauce_connect:0 - INFO - GET http://localhost:4567/ -> 302 (3ms, 0 bytes)
+2013-11-23 16:41:26,414 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/index.html
+2013-11-23 16:41:26,418 - sauce_connect:0 - INFO - GET http://localhost:4567/index.html -> 200 (4ms, 1209 bytes)
+2013-11-23 16:41:27,335 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:41:27,335 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:41:27,339 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (3ms, 632 bytes)
+2013-11-23 16:41:27,342 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (7ms, 296 bytes)
+2013-11-23 16:41:28,257 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:41:28,265 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (7ms, 296 bytes)
+2013-11-23 16:41:28,786 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/game.html
+2013-11-23 16:41:28,792 - sauce_connect:0 - INFO - GET http://localhost:4567/game.html -> 200 (5ms, 5887 bytes)
+2013-11-23 16:41:29,424 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:41:29,427 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (4ms, 632 bytes)
+2013-11-23 16:41:30,101 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/favicon.ico
+2013-11-23 16:41:30,108 - sauce_connect:0 - INFO - GET http://localhost:4567/favicon.ico -> 404 (8ms, 289 bytes)
+2013-11-23 16:46:53,119 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/
+2013-11-23 16:46:53,125 - sauce_connect:0 - INFO - GET http://localhost:4567/ -> 302 (4ms, 0 bytes)
+2013-11-23 16:46:53,355 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/index.html
+2013-11-23 16:46:53,359 - sauce_connect:0 - INFO - GET http://localhost:4567/index.html -> 200 (4ms, 1209 bytes)
+2013-11-23 16:46:53,799 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:46:53,799 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:46:53,802 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (5ms, 632 bytes)
+2013-11-23 16:46:53,805 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (7ms, 296 bytes)
+2013-11-23 16:46:54,286 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:46:54,292 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (7ms, 296 bytes)
+2013-11-23 16:47:08,683 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/game.html
+2013-11-23 16:47:08,687 - sauce_connect:0 - INFO - GET http://localhost:4567/game.html -> 200 (6ms, 5887 bytes)
+2013-11-23 16:47:08,961 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:47:08,967 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (5ms, 632 bytes)
+2013-11-23 16:47:09,184 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:47:09,193 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (9ms, 296 bytes)
+2013-11-23 16:47:09,673 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:47:09,678 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (6ms, 296 bytes)
+2013-11-23 16:47:10,792 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/initialize?gametype=false
+2013-11-23 16:47:10,796 - sauce_connect:0 - INFO - GET http://localhost:4567/initialize?gametype=false -> 200 (5ms, 4 bytes)
+2013-11-23 16:47:25,144 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/game.html
+2013-11-23 16:47:25,151 - sauce_connect:0 - INFO - GET http://localhost:4567/game.html -> 200 (6ms, 5887 bytes)
+2013-11-23 16:47:25,983 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:47:25,983 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:47:25,990 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (6ms, 632 bytes)
+2013-11-23 16:47:25,993 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (10ms, 296 bytes)
+2013-11-23 16:47:26,674 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:47:26,683 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (8ms, 296 bytes)
+2013-11-23 16:47:27,381 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/initialize?gametype=true
+2013-11-23 16:47:27,384 - sauce_connect:0 - INFO - GET http://localhost:4567/initialize?gametype=true -> 200 (3ms, 4 bytes)
+2013-11-23 16:47:42,740 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/
+2013-11-23 16:47:42,744 - sauce_connect:0 - INFO - GET http://localhost:4567/ -> 302 (5ms, 0 bytes)
+2013-11-23 16:47:43,048 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/index.html
+2013-11-23 16:47:43,052 - sauce_connect:0 - INFO - GET http://localhost:4567/index.html -> 200 (5ms, 1209 bytes)
+2013-11-23 16:47:43,969 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:47:43,970 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:47:43,973 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (5ms, 632 bytes)
+2013-11-23 16:47:43,977 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (8ms, 296 bytes)
+2013-11-23 16:47:44,673 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/static/favicon.gif
+2013-11-23 16:47:44,681 - sauce_connect:0 - INFO - GET http://localhost:4567/static/favicon.gif -> 404 (8ms, 296 bytes)
+2013-11-23 16:47:45,033 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/game.html
+2013-11-23 16:47:45,038 - sauce_connect:0 - INFO - GET http://localhost:4567/game.html -> 200 (4ms, 5887 bytes)
+2013-11-23 16:47:45,505 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/css/custom.css
+2013-11-23 16:47:45,509 - sauce_connect:0 - INFO - GET http://localhost:4567/css/custom.css -> 200 (5ms, 632 bytes)
+2013-11-23 16:47:46,427 - sauce_connect:0 - INFO - Request started: GET http://localhost:4567/favicon.ico
+2013-11-23 16:47:46,434 - sauce_connect:0 - INFO - GET http://localhost:4567/favicon.ico -> 404 (6ms, 289 bytes)
