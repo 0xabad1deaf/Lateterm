@@ -58,18 +58,11 @@ public class ITWebDriver {
         assertEquals(driver.getCurrentUrl(), "http://localhost:4567/game.html");
     }
 
-    private boolean main_game_test = false;
-
     @Test 
     public void  CheckPlayerVsPlayerButton() throws Exception {
          driver.get("http://localhost:4567/game.html");
          driver.findElement(By.id("btn2")).click();
-
-         if (driver.findElement(By.className("main-game")).isDisplayed())
-         {
-            main_game_test = true;
-         }
-         assertEquals(main_game_test, true);
+         assertEquals(driver.findElement(By.className("main-game")).isDisplayed(), true);
     }
 
     @After
