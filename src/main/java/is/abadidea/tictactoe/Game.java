@@ -76,11 +76,13 @@ public class Game {
         }
         if(gameType){
             grid.set_x(x,y);
-            if(!(win = gotWinner()))
+            if(!(win = gotWinner())){
                 do{
                     success = playNPC();
                 } while(!success);
-
+		if(gotWinner())
+		    winner = 2;
+	    }
         } else {
             if(currentPlayer == player1){
                 grid.set_x(x,y);
