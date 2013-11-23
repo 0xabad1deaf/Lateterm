@@ -13,6 +13,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.SessionId;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 
@@ -77,20 +79,31 @@ public class ITWebDriver implements SauceOnDemandSessionIdProvider {
         assertEquals(driver.getCurrentUrl(), "http://localhost:4567/game.html");
     }
 
-    /*@Test
+    @Test
     public void CheckPlayerVsComputerButton() throws Exception {
          driver.get("http://localhost:4567/game.html");
          driver.findElement(By.id("btn1")).click();
          assertEquals(driver.findElement(By.className("main-game")).isDisplayed(), true);
-         driver.close();
-    }*/
+    }
+
+    @Test
+    public void CheckCheckgetsPlacedWhenPlacingCheck() throws Exception {
+         driver.get("http://localhost:4567/game.html");
+         driver.findElement(By.id("btn1")).click();
+         assertEquals(driver.findElement(By.className("main-game")).isDisplayed(), true);
+         driver.findElement(By.id("box11")).click();
+         (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+             public Boolean apply(WebDriver d) {
+                 return driver.findElement(By.className("fa-check")).isDisplayed();
+             }
+         });
+    }
 
     @Test 
     public void CheckPlayerVsPlayerButton() throws Exception {
          driver.get("http://localhost:4567/game.html");
          driver.findElement(By.id("btn2")).click();
          assertEquals(driver.findElement(By.className("main-game")).isDisplayed(), true);
-         driver.close();
     }
 
     @Test
