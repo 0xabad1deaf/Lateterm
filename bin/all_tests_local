@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Setup and start Sauce Connect for your local build
+
+#Cleanup and package
+.//bin/clean
+.//bin/package
+
+java -jar Sauce-Connect.jar --readyfile $READY_FILE \
+joiblumen 19374220-fef6-4897-8922-fa92f7142053 &
+
+
+# Wait for Connect to be ready before exiting
+while [ ! -f $READY_FILE ]; do
+  sleep .5
+done
+
+.//bin/run
+#Run the integration tests
+mvn verify
