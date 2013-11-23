@@ -17,6 +17,7 @@ fi
 
 java -jar Sauce-Connect.jar joiblumen 19374220-fef6-4897-8922-fa92f7142053 &
 sleep 45 # Wait for Sauce to connect
+cd ..
 
 .//bin/run
 #Run the integration tests
