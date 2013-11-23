@@ -40,7 +40,6 @@ public class App
                     game.winner = 0;
                     game.full = false;
                 }
-                System.out.println(game.getState());
                 return game.getState();
             }
         });
@@ -51,13 +50,9 @@ public class App
                 boolean win = false;
                 int x = Integer.parseInt(request.queryParams("x"));
                 int y = Integer.parseInt(request.queryParams("y"));
-                System.out.println("winner?" + x + y);
                 if(game == null){
-                    System.out.println("ohoh");
                 }
                 game.playRound(x,y);
-                System.out.println("bla");
-                System.out.println(game.getState());
                 return game.getState();
             }
         });
