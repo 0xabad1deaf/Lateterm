@@ -9,6 +9,7 @@ bin/karisAwesomeScript
 *.jar
 *.war
 *.ear
-*auce_*
+*sauce*
+*Sauce*
 .DS_Store
 target
