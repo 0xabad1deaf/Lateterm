@@ -11,6 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.By;
 
+
 import java.net.URL;
 
 import static org.junit.Assert.assertEquals;
@@ -47,9 +48,15 @@ public class ITWebDriver {
     public void CheckPlayNowButton() throws Exception {
         driver.get("http://localhost:4567");
         driver.findElement(By.id("playnow")).click();
-        assertEquals(driver.getCurrentUrl(), "http://tictactoes.co.vu/game.tml");
+        assertEquals(driver.getCurrentUrl(), "http://localhost:4567/game.html");
     }
 
+    @Test
+    public void CheckPlayVsComputerButton() throws Exception {
+        driver.get("http://localhost:4567/game.html");
+        driver.findElement(By.id("btn1")).click();
+        assertEquals(driver.getCurrentUrl(), "http://localhost:4567/game.html");
+    }
 
     @After
     public void tearDown() throws Exception {
