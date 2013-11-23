@@ -6,7 +6,7 @@
 .//bin/clean
 .//bin/package
 
-if [ ! -f Sauce-connect/Sauce-connect.jar ]; then
+if [ ! -d Sauce-connect ]; then
     echo "Downloading Sauce-connect!"
     mkdir Sauce-connect                         && \
     cd Sauce-connect                            && \
