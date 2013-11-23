@@ -90,7 +90,11 @@ public class ITWebDriver implements SauceOnDemandSessionIdProvider {
     public void CheckCheckgetsPlacedWhenPlacingCheck() throws Exception {
          driver.get("http://localhost:4567/game.html");
          driver.findElement(By.id("btn1")).click();
-         assertEquals(driver.findElement(By.className("main-game")).isDisplayed(), true);
+         (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+             public Boolean apply(WebDriver d) {
+                 return driver.findElement(By.className("main-game")).isDisplayed();
+             }
+         });
          driver.findElement(By.id("box11")).click();
          (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
              public Boolean apply(WebDriver d) {
