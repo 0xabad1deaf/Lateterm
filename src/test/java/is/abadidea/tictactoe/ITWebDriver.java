@@ -55,7 +55,7 @@ public class ITWebDriver {
         assertEquals(driver.getCurrentUrl(), "http://localhost:4567/game.html");
     }
 
-    @Test
+    /*@Test
     public void CheckGrid00() throws Exception {
         driver.get("http://localhost:4567/game.html");
         driver.findElement(By.xpath("html/body/div[3]/div[1]/button[1]")).click();
@@ -68,25 +68,23 @@ public class ITWebDriver {
         //WebElement  i = driver.findElement(By.cssSelector("#box00 fa fa-5x"));
         WebElement  i = driver.findElement(By.cssSelector("@class fa fa-5x fa-check"));
         assertTrue(i.isEnabled());
-    }
-
-
-    /*Test
-    public void CheckPlayVsComputerButton() throws Exception {
-        driver.get("http://localhost:4567/game.html");
-        driver.findElement(By.id("btn1")).click();
-        driver.findElement(By.id("box00")).click();
-
-
-       // WebElement className = driver.findElement(By.cssSelector)
-        assertEquals(driver., "http://localhost:4567/game.html");
     }*/
+
+
+    @Test
+    public void CheckPlayerVsComputerButton() throws Exception {
+         driver.get("http://localhost:4567/game.html");
+         driver.findElement(By.id("btn1")).click();
+         assertEquals(driver.findElement(By.className("main-game")).isDisplayed(), true);
+         driver.close();
+    }
 
     @Test 
     public void  CheckPlayerVsPlayerButton() throws Exception {
          driver.get("http://localhost:4567/game.html");
          driver.findElement(By.id("btn2")).click();
          assertEquals(driver.findElement(By.className("main-game")).isDisplayed(), true);
+         driver.close();
     }
 
     @After
