@@ -6,14 +6,8 @@
 .//bin/clean
 .//bin/package
 
-java -jar Sauce-Connect.jar --readyfile $READY_FILE \
-joiblumen 19374220-fef6-4897-8922-fa92f7142053 &
-
-
-# Wait for Connect to be ready before exiting
-while [ ! -f $READY_FILE ]; do
-  sleep .5
-done
+java -jar Sauce-Connect.jar joiblumen 19374220-fef6-4897-8922-fa92f7142053 &
+sleep 30 # Wait for Sauce to connect
 
 .//bin/run
 #Run the integration tests
