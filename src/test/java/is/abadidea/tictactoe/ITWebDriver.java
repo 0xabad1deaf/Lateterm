@@ -20,7 +20,7 @@ import com.saucelabs.common.Utils;
  * *
  * @author Ross Rowe
  */
-public class WebDriverTest {
+public class ITWebDriver {
 
     private WebDriver driver;
 
