@@ -6,8 +6,12 @@ addons:
     access_key: "19374220-fef6-4897-8922-fa92f7142053"
 
 before_script:
+  - "bin/unit_tests"
+script:
   - "bin/run"
-  - sleep 3
+  - sleep 3 
+after_script:
+  - "bin/it_tests"
 
 deploy:
   provider: heroku
