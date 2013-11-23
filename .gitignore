@@ -9,6 +9,6 @@ bin/karisAwesomeScript
 *.jar
 *.war
 *.ear
-sauce_connect.log
+*sauce_connect*
 .DS_Store
 target
