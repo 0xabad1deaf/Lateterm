@@ -1,0 +1,9 @@
+#!/bin/bash
+
+curl https://gist.github.com/santiycr/5139565/raw/sauce_connect_setup.sh | bash
+java -jar Sauce-Connect.jar joiblumen 19374220-fef6-4897-8922-fa92f7142053
+./bin/clean
+./bin/package
+.//bin/run
+
+mvn verify
