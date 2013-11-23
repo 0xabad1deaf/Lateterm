@@ -5,14 +5,9 @@ addons:
     username: "joiblumen"
     access_key: "19374220-fef6-4897-8922-fa92f7142053"
 
-before_script:
-  - "bin/unit_test"
-
 script:
+  - "bin/unit_test"
   - "bin/run"
-  - sleep 3
-
-after_script:
   - "bin/clean"
   - "bin/it_test"
 
