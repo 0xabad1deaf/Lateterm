@@ -2,10 +2,6 @@
 
 # Setup and start Sauce Connect for your local build
 
-#Cleanup and package
-.//bin/clean
-.//bin/package
-
 if [ ! -d Sauce-connect ]; then
     echo "Downloading Sauce-connect!"
     mkdir Sauce-connect                         && \
@@ -17,7 +13,11 @@ rm  Sauce-Connect-latest.zip
 fi
 
 java -jar Sauce-connect/Sauce-Connect.jar joiblumen 19374220-fef6-4897-8922-fa92f7142053 &
-sleep 45 # Wait for Sauce to connect
+sleep 60 # Wait for Sauce to connect
+
+#Cleanup and package
+.//bin/clean
+.//bin/package
 
 .//bin/run
 #Run the integration tests
