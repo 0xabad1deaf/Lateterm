@@ -1,5 +1,4 @@
 #!/bin/bash
 
 git push heroku master
-ssh abadidea@46.149.26.48 ./deploy.sh
 
