@@ -1,5 +1,4 @@
 #! /bin/bash
 
-mvn package
 export PORT=4567
-java -jar target/Lateterm-1.0-SNAPSHOT-jar-with-dependencies.jar
+java -jar target/Lateterm-1.0-SNAPSHOT-jar-with-dependencies.jar &

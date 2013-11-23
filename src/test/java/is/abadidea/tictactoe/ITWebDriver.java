@@ -20,7 +20,7 @@ import com.saucelabs.common.Utils;
  * *
  * @author Ross Rowe
  */
-public class WebDriverTest {
+public class ITWebDriver {
 
     private WebDriver driver;
 
@@ -38,7 +38,7 @@ public class WebDriverTest {
 
     @Test
     public void CheckTitleName() throws Exception {
-        driver.get("127.0.0.1:60040");
+        driver.get("http://localhost:4567");
         assertEquals("Tic Tac Toes!",driver.getTitle());
     }
 
