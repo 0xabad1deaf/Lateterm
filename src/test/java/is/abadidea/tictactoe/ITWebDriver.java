@@ -107,22 +107,6 @@ public class ITWebDriver implements SauceOnDemandSessionIdProvider {
          assertEquals(driver.findElement(By.className("main-game")).isDisplayed(), true);
     }
 
-    @Test
-    public void CheckResultBox() throws Exception {
-         driver.get("http://localhost:4567/game.html");
-         driver.findElement(By.id("btn2")).click();
-         driver.findElement(By.id("box00")).click();
-         driver.findElement(By.id("box20")).click();
-         driver.findElement(By.id("box01")).click();
-         driver.findElement(By.id("box10")).click();
-         driver.findElement(By.id("box02")).click();
-         (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
-            public Boolean apply(WebDriver d) {
-                return d.findElement(By.id("result-box")).isDisplayed();
-            }
-        });
-    }
-    
     @After
     public void tearDown() throws Exception {
         driver.quit();
